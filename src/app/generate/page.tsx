@@ -3,7 +3,15 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Heart, Sparkles, Loader2, ArrowRight, CheckCircle } from 'lucide-react';
-import { WellnessGoal, UserPreferences } from '@/types/wellness';
+
+// Temporary type definitions to avoid import issues
+type WellnessGoal = 'better-sleep' | 'reduce-stress' | 'increase-energy' | 'improve-focus' | 'emotional-balance' | 'physical-wellness' | 'mindfulness' | 'self-compassion' | 'work-life-balance';
+
+interface UserPreferences {
+  timeCommitment: 'low' | 'moderate' | 'high';
+  energyLevel: 'low' | 'medium' | 'high';
+  environment: 'home' | 'office' | 'outdoor' | 'gym';
+}
 
 const wellnessGoals: { id: WellnessGoal; title: string; description: string }[] = [
   {

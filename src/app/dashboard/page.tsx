@@ -1,9 +1,31 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { Heart, Sparkles, Calendar, Clock, Target, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import { Heart, Plus, Calendar, TrendingUp, Clock, Sparkles } from 'lucide-react';
-import { WellnessPlan } from '@/types/wellness';
+import { Plus, TrendingUp } from 'lucide-react';
+// Temporary type definition to avoid import issues
+interface WellnessPlan {
+  id: string;
+  title: string;
+  description: string;
+  goal: string;
+  currentState: string;
+  preferences: {
+    timeCommitment: string;
+    energyLevel: string;
+    environment: string;
+  };
+  activities: Array<{
+    id: string;
+    title: string;
+    description: string;
+    duration: string;
+    category: string;
+  }>;
+  createdAt: string;
+}
 
 export default function DashboardPage() {
   const [plans, setPlans] = useState<WellnessPlan[]>([]);
