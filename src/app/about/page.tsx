@@ -1,56 +1,29 @@
 'use client';
 
 import Link from 'next/link';
-import { Heart, Sparkles, Users, Target, Award, Globe, ArrowRight, Shield } from 'lucide-react';
+import { Heart, Sparkles, Target, Award, Globe, ArrowRight, Shield, Code, Zap } from 'lucide-react';
 
 export default function AboutPage() {
-  const team = [
-    {
-      name: "Dr. Sarah Chen",
-      role: "Chief Wellness Officer",
-      bio: "Former clinical psychologist with 15+ years in wellness research. PhD from Stanford University.",
-      image: "👩‍⚕️"
-    },
-    {
-      name: "Michael Rodriguez",
-      role: "Head of AI & Technology",
-      bio: "AI researcher with expertise in machine learning for healthcare. Previously at Google Health.",
-      image: "👨‍💻"
-    },
-    {
-      name: "Emily Johnson",
-      role: "VP of Product",
-      bio: "Product leader with experience building successful health tech products. MBA from Harvard.",
-      image: "👩‍💼"
-    },
-    {
-      name: "David Kim",
-      role: "Head of Engineering",
-      bio: "Full-stack engineer with 10+ years building scalable health applications.",
-      image: "👨‍🔧"
-    }
-  ];
-
   const values = [
     {
       icon: <Heart className="h-8 w-8" />,
       title: "Empathy First",
-      description: "We understand that wellness is deeply personal. Every feature we build starts with understanding your unique journey."
+      description: "I understand that wellness is deeply personal. Every feature I build starts with understanding your unique journey."
     },
     {
       icon: <Target className="h-8 w-8" />,
       title: "Evidence-Based",
-      description: "Our recommendations are grounded in scientific research and validated wellness practices."
+      description: "My recommendations are grounded in scientific research and validated wellness practices."
     },
     {
       icon: <Shield className="h-8 w-8" />,
       title: "Privacy & Security",
-      description: "Your health data is sacred. We protect it with enterprise-grade security and never sell your information."
+      description: "Your health data is sacred. I protect it with enterprise-grade security and never sell your information."
     },
     {
       icon: <Sparkles className="h-8 w-8" />,
       title: "Innovation",
-      description: "We continuously push the boundaries of what's possible with AI to deliver better wellness outcomes."
+      description: "I continuously push the boundaries of what's possible with AI to deliver better wellness outcomes."
     }
   ];
 
@@ -58,17 +31,40 @@ export default function AboutPage() {
     {
       year: "2024",
       title: "WellnessAI Launches",
-      description: "Our AI-powered wellness platform goes live, helping thousands of users transform their well-being."
+      description: "My AI-powered wellness platform goes live, helping users transform their well-being through personalized guidance."
     },
     {
       year: "2023",
-      title: "Research & Development",
-      description: "Two years of intensive research and development, building the foundation for personalized wellness AI."
+      title: "Development & Research",
+      description: "Intensive research and development, building the foundation for personalized wellness AI technology."
     },
     {
       year: "2022",
-      title: "Company Founded",
-      description: "WellnessAI is founded with a mission to make personalized wellness accessible to everyone."
+      title: "Vision Born",
+      description: "The idea for WellnessAI is conceived with a mission to make personalized wellness accessible to everyone."
+    }
+  ];
+
+  const skills = [
+    {
+      icon: <Code className="h-6 w-6" />,
+      title: "Full-Stack Development",
+      description: "Next.js, React, TypeScript, Node.js"
+    },
+    {
+      icon: <Zap className="h-6 w-6" />,
+      title: "AI & Machine Learning",
+      description: "OpenAI, LangChain, Vector Databases"
+    },
+    {
+      icon: <Globe className="h-6 w-6" />,
+      title: "Cloud & DevOps",
+      description: "Vercel, AWS, CI/CD, Monitoring"
+    },
+    {
+      icon: <Heart className="h-6 w-6" />,
+      title: "Wellness Research",
+      description: "Health psychology, nutrition, fitness"
     }
   ];
 
@@ -113,7 +109,7 @@ export default function AboutPage() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Our Mission
+            My Mission
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
             To democratize personalized wellness by making AI-powered health guidance accessible, 
@@ -124,7 +120,7 @@ export default function AboutPage() {
               href="/generate"
               className="bg-emerald-600 text-white px-8 py-4 rounded-lg hover:bg-emerald-700 transition-colors text-lg font-semibold"
             >
-              Join Our Mission
+              Join My Mission
             </Link>
             <Link
               href="/contact"
@@ -136,50 +132,52 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Story Section */}
+      {/* Founder Story Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                The WellnessAI Story
+                Meet Chudi Nnorukam
               </h2>
               <div className="space-y-6 text-lg text-gray-600">
+                <p>
+                  Hi, I'm Chudi Nnorukam, the founder and developer behind WellnessAI. I'm passionate 
+                  about leveraging technology to solve real-world problems, particularly in the wellness space.
+                </p>
                 <p>
                   WellnessAI was born from a simple observation: while technology has transformed 
                   nearly every aspect of our lives, personalized wellness guidance remained out of 
                   reach for most people.
                 </p>
                 <p>
-                  Our founders, a team of AI researchers, healthcare professionals, and wellness 
-                  experts, came together with a shared vision: to leverage the power of artificial 
-                  intelligence to make personalized wellness guidance accessible to everyone.
+                  As a solo developer and entrepreneur, I believe in the power of AI to democratize 
+                  access to personalized wellness guidance. My goal is to help people achieve their 
+                  wellness goals through intelligent, data-driven recommendations.
                 </p>
                 <p>
-                  Today, we're proud to serve over 50,000 users worldwide, helping them achieve 
-                  their wellness goals through AI-powered personalized plans and guidance.
+                  I'm committed to building a platform that's not just technologically advanced, 
+                  but also genuinely helpful and accessible to everyone.
                 </p>
               </div>
             </div>
             <div className="bg-emerald-100 rounded-2xl p-8">
               <div className="text-center">
-                <Globe className="h-16 w-16 text-emerald-600 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Global Impact</h3>
+                <div className="w-32 h-32 bg-emerald-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <span className="text-4xl text-white font-bold">CN</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">Chudi Nnorukam</h3>
+                <p className="text-emerald-600 font-medium mb-4">Founder & Developer</p>
+                <p className="text-gray-600 mb-6">
+                  Full-stack developer passionate about AI-powered wellness solutions
+                </p>
                 <div className="grid grid-cols-2 gap-4 mt-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-emerald-600">50K+</div>
-                    <div className="text-gray-600">Active Users</div>
+                    <div className="text-2xl font-bold text-emerald-600">100%</div>
+                    <div className="text-gray-600">Solo Built</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-emerald-600">150+</div>
-                    <div className="text-gray-600">Countries</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-emerald-600">95%</div>
-                    <div className="text-gray-600">Satisfaction Rate</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-emerald-600">24/7</div>
+                    <div className="text-2xl font-bold text-emerald-600">24/7</div>
                     <div className="text-gray-600">Support</div>
                   </div>
                 </div>
@@ -189,21 +187,49 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* Skills Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Our Values
+              My Expertise
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              These core values guide everything we do, from product development to customer support.
+              The technical skills and knowledge that power WellnessAI's personalized recommendations.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {skills.map((skill, index) => (
+              <div key={index} className="bg-white rounded-xl p-8 text-center hover:shadow-lg transition-shadow">
+                <div className="bg-emerald-100 rounded-full p-3 w-fit mx-auto mb-6">
+                  <div className="text-emerald-600">
+                    {skill.icon}
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">{skill.title}</h3>
+                <p className="text-gray-600">{skill.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              My Values
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              These core values guide everything I do, from product development to customer support.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="bg-white rounded-xl p-8 text-center hover:shadow-lg transition-shadow">
+              <div key={index} className="bg-gray-50 rounded-xl p-8 text-center hover:bg-emerald-50 transition-colors">
                 <div className="bg-emerald-100 rounded-full p-3 w-fit mx-auto mb-6">
                   <div className="text-emerald-600">
                     {value.icon}
@@ -217,40 +243,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Meet Our Team
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The passionate individuals behind WellnessAI, dedicated to transforming wellness through technology.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-8 text-center hover:bg-emerald-50 transition-colors">
-                <div className="text-6xl mb-4">{member.image}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
-                <p className="text-emerald-600 font-medium mb-4">{member.role}</p>
-                <p className="text-gray-600 text-sm">{member.bio}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Milestones Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Our Journey
+              My Journey
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Key milestones in our mission to democratize personalized wellness.
+              Key milestones in my mission to democratize personalized wellness.
             </p>
           </div>
 
@@ -274,7 +275,7 @@ export default function AboutPage() {
       <section className="py-20 bg-emerald-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">
-            Join us in transforming wellness
+            Join me in transforming wellness
           </h2>
           <p className="text-xl text-emerald-100 mb-8">
             Be part of the movement to make personalized wellness accessible to everyone.
@@ -291,7 +292,7 @@ export default function AboutPage() {
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-emerald-700 transition-colors text-lg font-semibold"
             >
-              Work With Us
+              Work With Me
             </Link>
           </div>
         </div>
@@ -339,7 +340,7 @@ export default function AboutPage() {
           </div>
           
           <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 WellnessAI. All rights reserved.</p>
+            <p>&copy; 2024 WellnessAI by Chudi Nnorukam. All rights reserved.</p>
           </div>
         </div>
       </footer>

@@ -1,0 +1,117 @@
+[
+  {
+    "page": "/Users/chudinnorukam/Documents/Chudi's Micro SaaS Apps/wellness-agent-saas/src/app/page.tsx",
+    "timestamp": "2025-07-20T13:46:32.214Z",
+    "seoScore": 35,
+    "issues": [],
+    "recommendations": [
+      "🔴 Critical: Implement basic SEO elements (title, meta description, headings)"
+    ],
+    "brandAlignment": {
+      "score": 2,
+      "issues": [],
+      "authentic": true
+    }
+  },
+  {
+    "page": "/Users/chudinnorukam/Documents/Chudi's Micro SaaS Apps/wellness-agent-saas/src/app/features/page.tsx",
+    "timestamp": "2025-07-20T13:46:32.223Z",
+    "seoScore": 35,
+    "issues": [],
+    "recommendations": [
+      "🔴 Critical: Implement basic SEO elements (title, meta description, headings)"
+    ],
+    "brandAlignment": {
+      "score": 2,
+      "issues": [],
+      "authentic": true
+    }
+  },
+  {
+    "page": "/Users/chudinnorukam/Documents/Chudi's Micro SaaS Apps/wellness-agent-saas/src/app/pricing/page.tsx",
+    "timestamp": "2025-07-20T13:46:32.224Z",
+    "seoScore": 35,
+    "issues": [],
+    "recommendations": [
+      "🔴 Critical: Implement basic SEO elements (title, meta description, headings)"
+    ],
+    "brandAlignment": {
+      "score": 2,
+      "issues": [],
+      "authentic": true
+    }
+  },
+  {
+    "page": "/Users/chudinnorukam/Documents/Chudi's Micro SaaS Apps/wellness-agent-saas/src/app/about/page.tsx",
+    "timestamp": "2025-07-20T13:46:32.225Z",
+    "seoScore": 35,
+    "issues": [],
+    "recommendations": [
+      "🔴 Critical: Implement basic SEO elements (title, meta description, headings)"
+    ],
+    "brandAlignment": {
+      "score": 3,
+      "issues": [],
+      "authentic": true
+    }
+  },
+  {
+    "page": "/Users/chudinnorukam/Documents/Chudi's Micro SaaS Apps/wellness-agent-saas/src/app/contact/page.tsx",
+    "timestamp": "2025-07-20T13:46:32.226Z",
+    "seoScore": 35,
+    "issues": [],
+    "recommendations": [
+      "🔴 Critical: Implement basic SEO elements (title, meta description, headings)",
+      "⚠️ Brand: Remove inauthentic content and align with Chudi's solo founder story"
+    ],
+    "brandAlignment": {
+      "score": 2,
+      "issues": [
+        "Found potentially inauthentic content: our team"
+      ],
+      "authentic": false
+    }
+  },
+  {
+    "page": "/Users/chudinnorukam/Documents/Chudi's Micro SaaS Apps/wellness-agent-saas/src/app/login/page.tsx",
+    "timestamp": "2025-07-20T13:46:32.229Z",
+    "seoScore": 20,
+    "issues": [],
+    "recommendations": [
+      "🔴 Critical: Implement basic SEO elements (title, meta description, headings)"
+    ],
+    "brandAlignment": {
+      "score": 0,
+      "issues": [],
+      "authentic": true
+    }
+  },
+  {
+    "page": "/Users/chudinnorukam/Documents/Chudi's Micro SaaS Apps/wellness-agent-saas/src/app/generate/page.tsx",
+    "timestamp": "2025-07-20T13:46:32.230Z",
+    "seoScore": 10,
+    "issues": [],
+    "recommendations": [
+      "🔴 Critical: Implement basic SEO elements (title, meta description, headings)"
+    ],
+    "brandAlignment": {
+      "score": 0,
+      "issues": [],
+      "authentic": true
+    }
+  },
+  {
+    "page": "/Users/chudinnorukam/Documents/Chudi's Micro SaaS Apps/wellness-agent-saas/src/app/dashboard/page.tsx",
+    "timestamp": "2025-07-20T13:46:32.230Z",
+    "seoScore": 50,
+    "issues": [],
+    "recommendations": [
+      "🟡 Moderate: Optimize existing SEO elements and add more keywords"
+    ],
+    "brandAlignment": {
+      "score": 1,
+      "issues": [],
+      "authentic": true
+    }
+  }
+]
