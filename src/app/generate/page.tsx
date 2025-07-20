@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Heart, Sparkles, Loader2, ArrowRight, CheckCircle } from 'lucide-react';
-import { WellnessGoal, UserPreferences } from '@/src/types/wellness';
+import { WellnessGoal, UserPreferences } from '@/types/wellness';
 
 const wellnessGoals: { id: WellnessGoal; title: string; description: string }[] = [
   {

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createServerSupabaseClient } from '@/lib/supabase';
-import { executeGeneratePlanTask } from '@/src/tasks/generate-plan';
-import { GeneratePlanRequest, GeneratePlanResponse } from '@/src/types/wellness';
+import { executeGeneratePlanTask } from '@/tasks/generate-plan';
+import { GeneratePlanRequest, GeneratePlanResponse } from '@/types/wellness';
 
 export async function POST(request: NextRequest) {
   try {

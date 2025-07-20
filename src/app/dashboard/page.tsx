@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Heart, Plus, Calendar, TrendingUp, Clock, Sparkles } from 'lucide-react';
-import { WellnessPlan } from '@/src/types/wellness';
+import { WellnessPlan } from '@/types/wellness';
 
 export default function DashboardPage() {
   const [plans, setPlans] = useState<WellnessPlan[]>([]);

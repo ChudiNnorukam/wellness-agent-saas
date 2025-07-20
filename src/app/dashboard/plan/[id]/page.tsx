@@ -16,7 +16,7 @@ import {
   Calendar,
   Star
 } from 'lucide-react';
-import { WellnessPlan } from '@/src/types/wellness';
+import { WellnessPlan } from '@/types/wellness';
 
 export default function PlanViewPage() {
   const params = useParams();
