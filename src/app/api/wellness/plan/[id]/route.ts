@@ -3,7 +3,7 @@ import { createServerSupabaseClient } from '@/lib/supabase';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const supabase = createServerSupabaseClient();
@@ -18,7 +18,8 @@ export async function GET(
       );
     }
 
-    const planId = params.id;
+    const resolvedParams = await params;
+    const planId = resolvedParams.id;
 
     // Fetch the specific plan
     const { data: plan, error } = await supabase
@@ -65,7 +66,7 @@ export async function GET(
 
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const supabase = createServerSupabaseClient();
@@ -80,7 +81,8 @@ export async function PUT(
       );
     }
 
-    const planId = params.id;
+    const resolvedParams = await params;
+    const planId = resolvedParams.id;
     const body = await request.json();
 
     // Update the plan
@@ -126,7 +128,7 @@ export async function PUT(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     const supabase = createServerSupabaseClient();
@@ -141,7 +143,8 @@ export async function DELETE(
       );
     }
 
-    const planId = params.id;
+    const resolvedParams = await params;
+    const planId = resolvedParams.id;
 
     // Soft delete by setting is_active to false
     const { error } = await supabase
