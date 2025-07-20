@@ -20,7 +20,7 @@ import { WellnessPlan } from '@/types/wellness';
 
 export default function PlanViewPage() {
   const params = useParams();
-  const router = useRouter();
+  const _router = useRouter();
   const [plan, setPlan] = useState<WellnessPlan | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -41,7 +41,7 @@ export default function PlanViewPage() {
       } else {
         setError(data.error || 'Failed to fetch plan');
       }
-    } catch (err) {
+    } catch (_err) {
       setError('An error occurred while fetching the plan');
     } finally {
       setLoading(false);
@@ -259,7 +259,7 @@ export default function PlanViewPage() {
                 <div key={index} className="bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 rounded-lg p-4">
                   <div className="flex items-start space-x-3">
                     <Star className="h-5 w-5 text-emerald-600 mt-0.5" />
-                    <p className="text-gray-800 italic">"{affirmation}"</p>
+                    <p className="text-gray-800 italic">&ldquo;{affirmation}&rdquo;</p>
                   </div>
                 </div>
               ))}

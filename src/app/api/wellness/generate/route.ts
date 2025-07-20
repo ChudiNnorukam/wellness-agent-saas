@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if user has active subscription or is on free tier
-    const isSubscriptionActive = userProfile.subscription_status !== 'free' && 
+    const _isSubscriptionActive = userProfile.subscription_status !== 'free' && 
       userProfile.subscription_end_date && 
       new Date(userProfile.subscription_end_date) > new Date();
 
@@ -132,7 +132,7 @@ export async function POST(request: NextRequest) {
   }
 }
 
-export async function GET(request: NextRequest) {
+export async function GET(_request: NextRequest) {
   try {
     const supabase = createServerSupabaseClient();
     

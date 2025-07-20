@@ -109,7 +109,7 @@ export default function GeneratePage() {
       } else {
         setError(data.error || 'Failed to generate plan');
       }
-    } catch (err) {
+    } catch (_err) {
       setError('An error occurred while generating your plan');
     } finally {
       setIsGenerating(false);
@@ -235,7 +235,7 @@ export default function GeneratePage() {
                 </label>
                 <select
                   value={preferences.timeCommitment}
-                  onChange={(e) => setPreferences({...preferences, timeCommitment: e.target.value as any})}
+                  onChange={(e) => setPreferences({...preferences, timeCommitment: e.target.value as 'minimal' | 'moderate' | 'extensive'})}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                 >
                   <option value="minimal">Minimal (5-15 minutes/day)</option>
@@ -250,7 +250,7 @@ export default function GeneratePage() {
                 </label>
                 <select
                   value={preferences.energyLevel}
-                  onChange={(e) => setPreferences({...preferences, energyLevel: e.target.value as any})}
+                  onChange={(e) => setPreferences({...preferences, energyLevel: e.target.value as 'low' | 'medium' | 'high'})}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                 >
                   <option value="low">Low Energy</option>
@@ -265,7 +265,7 @@ export default function GeneratePage() {
                 </label>
                 <select
                   value={preferences.environment}
-                  onChange={(e) => setPreferences({...preferences, environment: e.target.value as any})}
+                  onChange={(e) => setPreferences({...preferences, environment: e.target.value as 'home' | 'office' | 'outdoor' | 'mixed'})}
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
                 >
                   <option value="home">Home</option>

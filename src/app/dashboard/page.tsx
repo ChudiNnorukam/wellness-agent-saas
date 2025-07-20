@@ -24,7 +24,7 @@ export default function DashboardPage() {
       } else {
         setError(data.error || 'Failed to fetch plans');
       }
-    } catch (err) {
+    } catch (_err) {
       setError('An error occurred while fetching your plans');
     } finally {
       setLoading(false);

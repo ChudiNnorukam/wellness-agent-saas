@@ -1,4 +1,4 @@
-import { WellnessPlan, PlanContent, UserPreferences, WellnessGoal } from '../types/wellness';
+import { WellnessPlan, UserPreferences } from '../types/wellness';
 
 export interface GeneratePlanTask {
   name: 'generate-wellness-plan';
@@ -13,7 +13,7 @@ export interface GeneratePlanTask {
       name: 'validate-input';
       parameters: {
         input: string;
-        context: 'goal';
+        _context: 'goal';
       };
     },
     {
@@ -51,9 +51,9 @@ export interface GeneratePlanTask {
     {
       name: 'format-wellness-plan';
       parameters: {
-        routine: any;
+        routine: Record<string, unknown>;
         affirmations: string[];
-        selfCareTips: any[];
+        selfCareTips: Record<string, unknown>[];
         goal: string;
         userId: string;
       };
@@ -74,7 +74,7 @@ export const generateWellnessPlanTask: GeneratePlanTask = {
       name: 'validate-input',
       parameters: {
         input: '',
-        context: 'goal'
+        _context: 'goal'
       }
     },
     {
@@ -201,7 +201,7 @@ async function validateWellnessInput(input: string, context: 'goal' | 'currentSt
 async function analyzeUserNeeds(goal: string, currentState: string, preferences?: UserPreferences) {
   // Analyze the user's goal and current state to determine appropriate recommendations
   const timeCommitment = preferences?.timeCommitment || 'moderate';
-  const energyLevel = preferences?.energyLevel || 'medium';
+  const _energyLevel = preferences?.energyLevel || 'medium';
   
   return {
     timeCommitment,
@@ -298,9 +298,9 @@ async function generateSelfCareTips(goal: string, preferences?: UserPreferences,
 }
 
 async function formatWellnessPlan(
-  routine: any,
+  routine: Record<string, unknown>,
   affirmations: string[],
-  selfCareTips: any[],
+  selfCareTips: Record<string, unknown>[],
   goal: string,
   userId: string
 ): Promise<WellnessPlan> {
