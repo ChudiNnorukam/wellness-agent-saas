@@ -3,7 +3,7 @@ import Stripe from 'stripe';
 import { createClient } from '@supabase/supabase-js';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2024-12-18.acacia',
+  apiVersion: '2025-06-30.basil',
 });
 
 const supabase = createClient(
@@ -61,7 +61,7 @@ export async function POST(request: NextRequest) {
 }
 
 async function handleSubscriptionChange(subscription: Stripe.Subscription) {
-  const customer = await stripe.customers.retrieve(subscription.customer as string);
+  const customer = await stripe.customers.retrieve(subscription.customer as string) as Stripe.Customer;
   const userId = customer.metadata.userId;
 
   if (!userId) {
@@ -81,8 +81,8 @@ async function handleSubscriptionChange(subscription: Stripe.Subscription) {
       stripe_customer_id: subscription.customer as string,
       status: status,
       plan_type: planType,
-      current_period_start: new Date(subscription.current_period_start * 1000),
-      current_period_end: new Date(subscription.current_period_end * 1000),
+      current_period_start: new Date((subscription as any).current_period_start * 1000),
+      current_period_end: new Date((subscription as any).current_period_end * 1000),
       cancel_at_period_end: subscription.cancel_at_period_end,
     });
 
@@ -91,13 +91,13 @@ async function handleSubscriptionChange(subscription: Stripe.Subscription) {
     .from('users')
     .update({
       subscription_status: status === 'active' ? planType : 'free',
-      subscription_end_date: new Date(subscription.current_period_end * 1000),
+      subscription_end_date: new Date((subscription as any).current_period_end * 1000),
     })
     .eq('id', userId);
 }
 
 async function handleSubscriptionCancellation(subscription: Stripe.Subscription) {
-  const customer = await stripe.customers.retrieve(subscription.customer as string);
+  const customer = await stripe.customers.retrieve(subscription.customer as string) as Stripe.Customer;
   const userId = customer.metadata.userId;
 
   if (!userId) return;
@@ -116,7 +116,7 @@ async function handleSubscriptionCancellation(subscription: Stripe.Subscription)
     .from('users')
     .update({
       subscription_status: 'free',
-      subscription_end_date: new Date(subscription.current_period_end * 1000),
+      subscription_end_date: new Date((subscription as any).current_period_end * 1000),
     })
     .eq('id', userId);
 }
