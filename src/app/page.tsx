@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { Heart, Sparkles, ArrowRight, CheckCircle, Star } from 'lucide-react';
 
+// Cache bust: 2025-07-20 deployment fix
 export default function Home() {
   const [email, setEmail] = useState('');
 
