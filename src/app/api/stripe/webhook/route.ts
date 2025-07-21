@@ -2,27 +2,46 @@ import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { createClient } from '@supabase/supabase-js';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+// Initialize Stripe client with proper error handling
+const stripeSecretKey = process.env.STRIPE_SECRET_KEY;
+const stripe = stripeSecretKey ? new Stripe(stripeSecretKey, {
   apiVersion: '2025-06-30.basil',
-});
+}) : null;
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-);
+// Initialize Supabase client with proper error handling
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const supabase = supabaseUrl && supabaseServiceKey ? createClient(supabaseUrl, supabaseServiceKey) : null;
 
 export async function POST(request: NextRequest) {
+  // Check if services are properly configured
+  if (!stripe || !supabase) {
+    console.error('Stripe or Supabase is not properly configured');
+    return NextResponse.json(
+      { error: 'Service not configured' },
+      { status: 500 }
+    );
+  }
+
   const body = await request.text();
-  const signature = request.headers.get('stripe-signature')!;
+  const signature = request.headers.get('stripe-signature');
+
+  if (!signature) {
+    return NextResponse.json(
+      { error: 'Missing signature' },
+      { status: 400 }
+    );
+  }
 
   let event: Stripe.Event;
 
   try {
-    event = stripe.webhooks.constructEvent(
-      body,
-      signature,
-      process.env.STRIPE_WEBHOOK_SECRET!
-    );
+    const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+    if (!webhookSecret) {
+      throw new Error('Webhook secret not configured');
+    }
+    
+    event = stripe.webhooks.constructEvent(body, signature, webhookSecret);
   } catch (error) {
     console.error('Webhook signature verification failed:', error);
     return NextResponse.json(
@@ -61,6 +80,8 @@ export async function POST(request: NextRequest) {
 }
 
 async function handleSubscriptionChange(subscription: Stripe.Subscription) {
+  if (!stripe || !supabase) return;
+  
   const customer = await stripe.customers.retrieve(subscription.customer as string) as Stripe.Customer;
   const userId = customer.metadata.userId;
 
@@ -97,6 +118,8 @@ async function handleSubscriptionChange(subscription: Stripe.Subscription) {
 }
 
 async function handleSubscriptionCancellation(subscription: Stripe.Subscription) {
+  if (!stripe || !supabase) return;
+  
   const customer = await stripe.customers.retrieve(subscription.customer as string) as Stripe.Customer;
   const userId = customer.metadata.userId;
 
