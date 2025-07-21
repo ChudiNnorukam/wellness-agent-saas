@@ -2,6 +2,7 @@
   "name": "wellness-agent-saas",
   "version": "0.1.6",
   "private": true,
+  "homepage": "https://wellness-agent-saas-ybpb.vercel.app",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",

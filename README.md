@@ -1,4 +1,10 @@
+# WellnessAI - AI-Powered Wellness Platform
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+## 🌐 Live Demo
+
+**Try WellnessAI Live**: [https://wellness-agent-saas-ybpb.vercel.app](https://wellness-agent-saas-ybpb.vercel.app)
 
 ## Getting Started
 

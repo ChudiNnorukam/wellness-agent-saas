@@ -5,7 +5,7 @@
 ### 1. Get Your Vercel Domain
 1. Go to [vercel.com/dashboard](https://vercel.com/dashboard)
 2. Click on your `wellness-agent-saas` project
-3. Copy your domain (e.g., `https://wellness-agent-saas.vercel.app`)
+3. Copy your domain (e.g., `https://wellness-agent-saas-ybpb.vercel.app`)
 
 ### 2. Create Stripe Test Products
 1. Go to [dashboard.stripe.com](https://dashboard.stripe.com)
