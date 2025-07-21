@@ -1,0 +1,19 @@
+{
+  "publishableKey": "your_publishable_key_here",
+  "secretKey": "your_secret_key_here",
+  "webhookSecret": "your_webhook_secret_here",
+  "products": {
+    "basic": {
+      "name": "WellnessAI Basic",
+      "price": 999,
+      "interval": "month",
+      "priceId": "price_basic_monthly"
+    },
+    "premium": {
+      "name": "WellnessAI Premium",
+      "price": 1999,
+      "interval": "month",
+      "priceId": "price_premium_monthly"
+    }
+  }
+}
