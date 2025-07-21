@@ -1,0 +1,38 @@
+{
+  "type": "reward_distribution_chart",
+  "title": "Reward Distribution Analysis",
+  "description": "Distribution of rewards across all trials",
+  "data": [
+    {
+      "range": "Very High (8-15)",
+      "count": 11,
+      "percentage": "22.0"
+    },
+    {
+      "range": "High (4-7)",
+      "count": 0,
+      "percentage": "0.0"
+    },
+    {
+      "range": "Medium (0-3)",
+      "count": 0,
+      "percentage": "0.0"
+    },
+    {
+      "range": "Low (-5-(-1))",
+      "count": 39,
+      "percentage": "78.0"
+    },
+    {
+      "range": "Very Low (-15-(-6))",
+      "count": 0,
+      "percentage": "0.0"
+    }
+  ],
+  "metadata": {
+    "totalTrials": 50,
+    "averageReward": "-1.26",
+    "maxReward": 12,
+    "minReward": -5
+  }
+}

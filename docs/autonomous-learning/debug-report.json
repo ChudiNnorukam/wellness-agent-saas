@@ -1,0 +1,68 @@
+{
+  "timestamp": "2025-07-21T05:59:02.702Z",
+  "summary": {
+    "totalTrials": 50,
+    "qTableSize": 80,
+    "qTableEntries": 80
+  },
+  "issues": [
+    {
+      "type": "low_success_rate",
+      "severity": "high",
+      "description": "Success rate is below 50%, indicating poor learning",
+      "suggestion": "Review reward function and action space"
+    }
+  ],
+  "recommendations": [
+    {
+      "type": "reward_function",
+      "priority": "high",
+      "description": "Optimize reward function to better guide learning",
+      "action": "Review and adjust reward weights for different action types"
+    },
+    {
+      "type": "exploration_rate",
+      "priority": "medium",
+      "description": "Consider reducing exploration rate for better exploitation",
+      "action": "Decrease epsilon decay rate or minimum epsilon"
+    },
+    {
+      "type": "action_space",
+      "priority": "medium",
+      "description": "Review action space for completeness",
+      "action": "Ensure all necessary actions for the project are included"
+    }
+  ],
+  "insights": [
+    {
+      "type": "best_action",
+      "description": "Best performing action: configure-auto-scaling (100.0% success)"
+    },
+    {
+      "type": "reward_trend",
+      "description": "Average reward: -1.26 (negative learning)"
+    }
+  ],
+  "nextSteps": [
+    {
+      "step": 1,
+      "action": "Review debug report and implement recommendations",
+      "priority": "high"
+    },
+    {
+      "step": 2,
+      "action": "Run additional trials with optimized parameters",
+      "priority": "high"
+    },
+    {
+      "step": 3,
+      "action": "Implement successful strategies in production",
+      "priority": "medium"
+    },
+    {
+      "step": 4,
+      "action": "Set up continuous monitoring and retraining",
+      "priority": "medium"
+    }
+  ]
+}

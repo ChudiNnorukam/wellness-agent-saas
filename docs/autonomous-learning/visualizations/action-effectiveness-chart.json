@@ -1,0 +1,103 @@
+{
+  "type": "action_effectiveness_chart",
+  "title": "Action Effectiveness Analysis",
+  "description": "Success rates and average rewards for each action",
+  "data": [
+    {
+      "action": "configure-auto-scaling",
+      "successRate": "100.0",
+      "avgReward": "12.00",
+      "totalAttempts": 1,
+      "totalReward": 12
+    },
+    {
+      "action": "configure-github-oauth",
+      "successRate": "27.0",
+      "avgReward": "-0.41",
+      "totalAttempts": 37,
+      "totalReward": -15
+    },
+    {
+      "action": "configure-supabase-oauth",
+      "successRate": "0.0",
+      "avgReward": "-5.00",
+      "totalAttempts": 2,
+      "totalReward": -10
+    },
+    {
+      "action": "integrate-supabase-auth",
+      "successRate": "0.0",
+      "avgReward": "-5.00",
+      "totalAttempts": 1,
+      "totalReward": -5
+    },
+    {
+      "action": "setup-cursor-integration",
+      "successRate": "0.0",
+      "avgReward": "-5.00",
+      "totalAttempts": 1,
+      "totalReward": -5
+    },
+    {
+      "action": "implement-retry-logic",
+      "successRate": "0.0",
+      "avgReward": "-5.00",
+      "totalAttempts": 1,
+      "totalReward": -5
+    },
+    {
+      "action": "setup-cdn-configuration",
+      "successRate": "0.0",
+      "avgReward": "-5.00",
+      "totalAttempts": 1,
+      "totalReward": -5
+    },
+    {
+      "action": "integrate-stripe-payments",
+      "successRate": "0.0",
+      "avgReward": "-5.00",
+      "totalAttempts": 1,
+      "totalReward": -5
+    },
+    {
+      "action": "test-stripe-integration",
+      "successRate": "0.0",
+      "avgReward": "-5.00",
+      "totalAttempts": 1,
+      "totalReward": -5
+    },
+    {
+      "action": "setup-rate-limiting",
+      "successRate": "0.0",
+      "avgReward": "-5.00",
+      "totalAttempts": 1,
+      "totalReward": -5
+    },
+    {
+      "action": "setup-webhook-handlers",
+      "successRate": "0.0",
+      "avgReward": "-5.00",
+      "totalAttempts": 1,
+      "totalReward": -5
+    },
+    {
+      "action": "setup-github-actions",
+      "successRate": "0.0",
+      "avgReward": "-5.00",
+      "totalAttempts": 1,
+      "totalReward": -5
+    },
+    {
+      "action": "setup-supabase-database",
+      "successRate": "0.0",
+      "avgReward": "-5.00",
+      "totalAttempts": 1,
+      "totalReward": -5
+    }
+  ],
+  "metadata": {
+    "totalActions": 13,
+    "bestAction": "configure-auto-scaling",
+    "worstAction": "setup-supabase-database"
+  }
+}

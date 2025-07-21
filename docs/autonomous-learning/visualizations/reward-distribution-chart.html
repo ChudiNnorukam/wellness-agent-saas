@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reward Distribution Analysis</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .chart-container { margin: 20px 0; }
+        .metadata { background: #f5f5f5; padding: 15px; border-radius: 5px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Reward Distribution Analysis</h1>
+        <p>Distribution of rewards across all trials</p>
+        
+        <div class="chart-container">
+            <canvas id="chart"></canvas>
+        </div>
+        
+        <div class="metadata">
+            <h3>Metadata</h3>
+            <pre>{
+  "totalTrials": 50,
+  "averageReward": "-1.26",
+  "maxReward": 12,
+  "minReward": -5
+}</pre>
+        </div>
+        
+        <div class="data">
+            <h3>Raw Data</h3>
+            <pre>[
+  {
+    "range": "Very High (8-15)",
+    "count": 11,
+    "percentage": "22.0"
+  },
+  {
+    "range": "High (4-7)",
+    "count": 0,
+    "percentage": "0.0"
+  },
+  {
+    "range": "Medium (0-3)",
+    "count": 0,
+    "percentage": "0.0"
+  },
+  {
+    "range": "Low (-5-(-1))",
+    "count": 39,
+    "percentage": "78.0"
+  },
+  {
+    "range": "Very Low (-15-(-6))",
+    "count": 0,
+    "percentage": "0.0"
+  }
+]</pre>
+        </div>
+    </div>
+    
+    <script>
+        // Chart.js configuration would go here
+        console.log('Chart data:', {"type":"reward_distribution_chart","title":"Reward Distribution Analysis","description":"Distribution of rewards across all trials","data":[{"range":"Very High (8-15)","count":11,"percentage":"22.0"},{"range":"High (4-7)","count":0,"percentage":"0.0"},{"range":"Medium (0-3)","count":0,"percentage":"0.0"},{"range":"Low (-5-(-1))","count":39,"percentage":"78.0"},{"range":"Very Low (-15-(-6))","count":0,"percentage":"0.0"}],"metadata":{"totalTrials":50,"averageReward":"-1.26","maxReward":12,"minReward":-5}});
+    </script>
+</body>
+</html>

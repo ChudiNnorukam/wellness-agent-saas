@@ -1,0 +1,32 @@
+{
+  "type": "performance_metrics",
+  "title": "RL Agent Performance Metrics",
+  "description": "Comprehensive performance analysis",
+  "data": {
+    "overall": {
+      "totalTrials": 50,
+      "successRate": "22.00",
+      "averageReward": "-1.26",
+      "averageDuration": "0"
+    },
+    "successful": {
+      "count": 11,
+      "averageReward": "12.00",
+      "averageDuration": "0"
+    },
+    "failed": {
+      "count": 39,
+      "averageReward": "-5.00",
+      "averageDuration": "0"
+    },
+    "learning": {
+      "finalEpsilon": 0.15566251141372844,
+      "improvementRate": "42.5",
+      "convergencePoint": 35
+    }
+  },
+  "metadata": {
+    "timestamp": "2025-07-21T05:59:02.696Z",
+    "analysisVersion": "1.0"
+  }
+}

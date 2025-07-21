@@ -1,0 +1,59 @@
+# GitHub Configuration
+# This file contains GitHub-specific settings
+
+# Repository settings
+repository:
+  name: wellness-agent-saas
+  description: AI-Powered Wellness Platform
+  homepage: https://wellness-agent-saas-ybpb.vercel.app
+  topics:
+    - nextjs
+    - typescript
+    - supabase
+    - stripe
+    - vercel
+
+# Branch protection rules
+branches:
+  main:
+    protection:
+      required_status_checks:
+        strict: true
+        contexts:
+          - "Deploy to GitHub Pages"
+      enforce_admins: false
+      required_pull_request_reviews:
+        required_approving_review_count: 1
+        dismiss_stale_reviews: true
+      restrictions: null
+
+# Issue templates
+issue_template:
+  - name: Bug Report
+    title: "[BUG] "
+    labels: ["bug"]
+    body: |
+      ## Bug Description
+      
+      ## Steps to Reproduce
+      
+      ## Expected Behavior
+      
+      ## Actual Behavior
+      
+      ## Environment
+      - OS: 
+      - Browser: 
+      - Version: 
+
+  - name: Feature Request
+    title: "[FEATURE] "
+    labels: ["enhancement"]
+    body: |
+      ## Feature Description
+      
+      ## Use Case
+      
+      ## Proposed Solution
+      
+      ## Alternatives Considered

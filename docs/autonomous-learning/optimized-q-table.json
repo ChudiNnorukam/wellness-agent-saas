@@ -1,0 +1,92 @@
+{
+  "{\"trial\":1,\"failures\":0,\"lastStrategy\":\"none\",\"timestamp\":\"2025-07-21T05:57:26.361Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-github-oauth": 3
+  },
+  "{\"trial\":2,\"failures\":0,\"lastStrategy\":\"configure-github-oauth\",\"timestamp\":\"2025-07-21T05:57:29.922Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "integrate-supabase-auth": -0.44999999999999996
+  },
+  "{\"trial\":3,\"failures\":1,\"lastStrategy\":\"integrate-supabase-auth\",\"timestamp\":\"2025-07-21T05:57:32.778Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-github-oauth": 2.6999999999999997
+  },
+  "{\"trial\":4,\"failures\":0,\"lastStrategy\":\"configure-github-oauth\",\"timestamp\":\"2025-07-21T05:57:36.082Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-github-oauth": 3
+  },
+  "{\"trial\":5,\"failures\":0,\"lastStrategy\":\"configure-github-oauth\",\"timestamp\":\"2025-07-21T05:57:39.372Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-github-oauth": 3
+  },
+  "{\"trial\":6,\"failures\":0,\"lastStrategy\":\"configure-github-oauth\",\"timestamp\":\"2025-07-21T05:57:42.516Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-github-oauth": 3
+  },
+  "{\"trial\":7,\"failures\":0,\"lastStrategy\":\"configure-github-oauth\",\"timestamp\":\"2025-07-21T05:57:45.019Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-github-oauth": 3
+  },
+  "{\"trial\":8,\"failures\":0,\"lastStrategy\":\"configure-github-oauth\",\"timestamp\":\"2025-07-21T05:57:47.587Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-github-oauth": 3
+  },
+  "{\"trial\":9,\"failures\":0,\"lastStrategy\":\"configure-github-oauth\",\"timestamp\":\"2025-07-21T05:57:50.122Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-github-oauth": 3
+  },
+  "{\"trial\":10,\"failures\":0,\"lastStrategy\":\"configure-github-oauth\",\"timestamp\":\"2025-07-21T05:57:52.653Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-github-oauth": 3
+  },
+  "{\"trial\":11,\"failures\":0,\"lastStrategy\":\"configure-github-oauth\",\"timestamp\":\"2025-07-21T05:57:55.311Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-github-oauth": 3
+  },
+  "{\"trial\":12,\"failures\":0,\"lastStrategy\":\"configure-github-oauth\",\"timestamp\":\"2025-07-21T05:57:57.835Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-github-oauth": 3
+  },
+  "{\"trial\":13,\"failures\":0,\"lastStrategy\":\"configure-github-oauth\",\"timestamp\":\"2025-07-21T05:58:00.328Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-github-oauth": 3
+  },
+  "{\"trial\":14,\"failures\":0,\"lastStrategy\":\"configure-github-oauth\",\"timestamp\":\"2025-07-21T05:58:03.004Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-github-oauth": 3
+  },
+  "{\"trial\":15,\"failures\":0,\"lastStrategy\":\"configure-github-oauth\",\"timestamp\":\"2025-07-21T05:58:06.117Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-github-oauth": 3
+  },
+  "{\"trial\":16,\"failures\":0,\"lastStrategy\":\"configure-github-oauth\",\"timestamp\":\"2025-07-21T05:58:10.030Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "test-github-connection": -0.6
+  },
+  "{\"trial\":17,\"failures\":1,\"lastStrategy\":\"test-github-connection\",\"timestamp\":\"2025-07-21T05:58:12.606Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-github-oauth": 2.6999999999999997
+  },
+  "{\"trial\":18,\"failures\":0,\"lastStrategy\":\"configure-github-oauth\",\"timestamp\":\"2025-07-21T05:58:15.199Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-github-oauth": 3
+  },
+  "{\"trial\":19,\"failures\":0,\"lastStrategy\":\"configure-github-oauth\",\"timestamp\":\"2025-07-21T05:58:19.914Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-github-oauth": 3
+  },
+  "{\"trial\":20,\"failures\":0,\"lastStrategy\":\"configure-github-oauth\",\"timestamp\":\"2025-07-21T05:58:22.605Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-github-oauth": 3
+  },
+  "{\"trial\":21,\"failures\":0,\"lastStrategy\":\"configure-github-oauth\",\"timestamp\":\"2025-07-21T05:58:25.372Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-github-oauth": 3
+  },
+  "{\"trial\":22,\"failures\":0,\"lastStrategy\":\"configure-github-oauth\",\"timestamp\":\"2025-07-21T05:58:28.994Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-github-oauth": 3
+  },
+  "{\"trial\":23,\"failures\":0,\"lastStrategy\":\"configure-github-oauth\",\"timestamp\":\"2025-07-21T05:58:31.514Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "implement-circuit-breaker": -0.44999999999999996
+  },
+  "{\"trial\":24,\"failures\":1,\"lastStrategy\":\"implement-circuit-breaker\",\"timestamp\":\"2025-07-21T05:58:34.023Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-supabase-oauth": 3.9
+  },
+  "{\"trial\":25,\"failures\":0,\"lastStrategy\":\"configure-supabase-oauth\",\"timestamp\":\"2025-07-21T05:58:36.509Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-github-oauth": 3
+  },
+  "{\"trial\":26,\"failures\":0,\"lastStrategy\":\"configure-github-oauth\",\"timestamp\":\"2025-07-21T05:58:38.995Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-github-oauth": 3
+  },
+  "{\"trial\":27,\"failures\":0,\"lastStrategy\":\"configure-github-oauth\",\"timestamp\":\"2025-07-21T05:58:41.531Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-github-oauth": 3
+  },
+  "{\"trial\":28,\"failures\":0,\"lastStrategy\":\"configure-github-oauth\",\"timestamp\":\"2025-07-21T05:58:44.579Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-github-oauth": 3
+  },
+  "{\"trial\":29,\"failures\":0,\"lastStrategy\":\"configure-github-oauth\",\"timestamp\":\"2025-07-21T05:58:47.057Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "test-stripe-connection": 3
+  },
+  "{\"trial\":30,\"failures\":0,\"lastStrategy\":\"test-stripe-connection\",\"timestamp\":\"2025-07-21T05:58:50.513Z\",\"github\":\"fully-configured\",\"vercel\":\"fully-configured\",\"supabase\":\"partially-configured\",\"stripe\":\"partially-configured\",\"deployment\":\"partially-deployed\",\"testing\":\"fully-tested\",\"integration\":\"not-integrated\",\"resilience\":\"not-implemented\",\"tooling\":\"partially-configured\"}": {
+    "configure-github-oauth": 3
+  }
+}

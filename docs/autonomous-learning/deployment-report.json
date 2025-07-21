@@ -1,0 +1,46 @@
+{
+  "timestamp": "2025-07-21T05:14:10.663Z",
+  "summary": {
+    "totalAttempts": 1,
+    "successful": 0,
+    "failed": 1,
+    "successRate": "0.0"
+  },
+  "attempts": [
+    {
+      "number": 1,
+      "timestamp": "2025-07-21T05:14:04.472Z",
+      "strategy": "github-pages-branch",
+      "status": "failed",
+      "errors": [
+        "GitHub Pages branch creation failed: Command failed: git checkout -b gh-pages"
+      ],
+      "duration": 73
+    }
+  ],
+  "learning": {
+    "successfulStrategies": [
+      "github-pages-branch",
+      "github-pages-actions"
+    ],
+    "failedStrategies": [
+      "github-pages-branch"
+    ],
+    "commonIssues": [
+      "GitHub Pages branch creation failed: Command failed: git checkout -b gh-pages"
+    ],
+    "lastAttempt": {
+      "number": 2,
+      "timestamp": "2025-07-21T05:14:09.549Z",
+      "strategy": "github-pages-actions",
+      "status": "success",
+      "errors": [],
+      "duration": 681
+    },
+    "successRate": 66.66666666666666
+  },
+  "recommendations": [
+    "Use \"github-pages-branch\" strategy for future deployments",
+    "Address common issues: GitHub Pages branch creation failed: Command failed: git checkout -b gh-pages"
+  ]
+}

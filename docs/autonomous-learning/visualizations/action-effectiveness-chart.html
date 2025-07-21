@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Action Effectiveness Analysis</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .chart-container { margin: 20px 0; }
+        .metadata { background: #f5f5f5; padding: 15px; border-radius: 5px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Action Effectiveness Analysis</h1>
+        <p>Success rates and average rewards for each action</p>
+        
+        <div class="chart-container">
+            <canvas id="chart"></canvas>
+        </div>
+        
+        <div class="metadata">
+            <h3>Metadata</h3>
+            <pre>{
+  "totalActions": 13,
+  "bestAction": "configure-auto-scaling",
+  "worstAction": "setup-supabase-database"
+}</pre>
+        </div>
+        
+        <div class="data">
+            <h3>Raw Data</h3>
+            <pre>[
+  {
+    "action": "configure-auto-scaling",
+    "successRate": "100.0",
+    "avgReward": "12.00",
+    "totalAttempts": 1,
+    "totalReward": 12
+  },
+  {
+    "action": "configure-github-oauth",
+    "successRate": "27.0",
+    "avgReward": "-0.41",
+    "totalAttempts": 37,
+    "totalReward": -15
+  },
+  {
+    "action": "configure-supabase-oauth",
+    "successRate": "0.0",
+    "avgReward": "-5.00",
+    "totalAttempts": 2,
+    "totalReward": -10
+  },
+  {
+    "action": "integrate-supabase-auth",
+    "successRate": "0.0",
+    "avgReward": "-5.00",
+    "totalAttempts": 1,
+    "totalReward": -5
+  },
+  {
+    "action": "setup-cursor-integration",
+    "successRate": "0.0",
+    "avgReward": "-5.00",
+    "totalAttempts": 1,
+    "totalReward": -5
+  },
+  {
+    "action": "implement-retry-logic",
+    "successRate": "0.0",
+    "avgReward": "-5.00",
+    "totalAttempts": 1,
+    "totalReward": -5
+  },
+  {
+    "action": "setup-cdn-configuration",
+    "successRate": "0.0",
+    "avgReward": "-5.00",
+    "totalAttempts": 1,
+    "totalReward": -5
+  },
+  {
+    "action": "integrate-stripe-payments",
+    "successRate": "0.0",
+    "avgReward": "-5.00",
+    "totalAttempts": 1,
+    "totalReward": -5
+  },
+  {
+    "action": "test-stripe-integration",
+    "successRate": "0.0",
+    "avgReward": "-5.00",
+    "totalAttempts": 1,
+    "totalReward": -5
+  },
+  {
+    "action": "setup-rate-limiting",
+    "successRate": "0.0",
+    "avgReward": "-5.00",
+    "totalAttempts": 1,
+    "totalReward": -5
+  },
+  {
+    "action": "setup-webhook-handlers",
+    "successRate": "0.0",
+    "avgReward": "-5.00",
+    "totalAttempts": 1,
+    "totalReward": -5
+  },
+  {
+    "action": "setup-github-actions",
+    "successRate": "0.0",
+    "avgReward": "-5.00",
+    "totalAttempts": 1,
+    "totalReward": -5
+  },
+  {
+    "action": "setup-supabase-database",
+    "successRate": "0.0",
+    "avgReward": "-5.00",
+    "totalAttempts": 1,
+    "totalReward": -5
+  }
+]</pre>
+        </div>
+    </div>
+    
+    <script>
+        // Chart.js configuration would go here
+        console.log('Chart data:', {"type":"action_effectiveness_chart","title":"Action Effectiveness Analysis","description":"Success rates and average rewards for each action","data":[{"action":"configure-auto-scaling","successRate":"100.0","avgReward":"12.00","totalAttempts":1,"totalReward":12},{"action":"configure-github-oauth","successRate":"27.0","avgReward":"-0.41","totalAttempts":37,"totalReward":-15},{"action":"configure-supabase-oauth","successRate":"0.0","avgReward":"-5.00","totalAttempts":2,"totalReward":-10},{"action":"integrate-supabase-auth","successRate":"0.0","avgReward":"-5.00","totalAttempts":1,"totalReward":-5},{"action":"setup-cursor-integration","successRate":"0.0","avgReward":"-5.00","totalAttempts":1,"totalReward":-5},{"action":"implement-retry-logic","successRate":"0.0","avgReward":"-5.00","totalAttempts":1,"totalReward":-5},{"action":"setup-cdn-configuration","successRate":"0.0","avgReward":"-5.00","totalAttempts":1,"totalReward":-5},{"action":"integrate-stripe-payments","successRate":"0.0","avgReward":"-5.00","totalAttempts":1,"totalReward":-5},{"action":"test-stripe-integration","successRate":"0.0","avgReward":"-5.00","totalAttempts":1,"totalReward":-5},{"action":"setup-rate-limiting","successRate":"0.0","avgReward":"-5.00","totalAttempts":1,"totalReward":-5},{"action":"setup-webhook-handlers","successRate":"0.0","avgReward":"-5.00","totalAttempts":1,"totalReward":-5},{"action":"setup-github-actions","successRate":"0.0","avgReward":"-5.00","totalAttempts":1,"totalReward":-5},{"action":"setup-supabase-database","successRate":"0.0","avgReward":"-5.00","totalAttempts":1,"totalReward":-5}],"metadata":{"totalActions":13,"bestAction":"configure-auto-scaling","worstAction":"setup-supabase-database"}});
+    </script>
+</body>
+</html>

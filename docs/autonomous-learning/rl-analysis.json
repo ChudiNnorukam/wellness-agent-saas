@@ -1,0 +1,578 @@
+{
+  "timestamp": "2025-07-21T05:45:56.506Z",
+  "summary": {
+    "totalTrials": 50,
+    "successfulTrials": 11,
+    "successRate": 22,
+    "finalEpsilon": 0.15566251141372844
+  },
+  "actionStats": {
+    "configure-github-oauth": {
+      "total": 37,
+      "success": 10,
+      "totalReward": -15
+    },
+    "configure-supabase-oauth": {
+      "total": 2,
+      "success": 0,
+      "totalReward": -10
+    },
+    "integrate-supabase-auth": {
+      "total": 1,
+      "success": 0,
+      "totalReward": -5
+    },
+    "setup-cursor-integration": {
+      "total": 1,
+      "success": 0,
+      "totalReward": -5
+    },
+    "implement-retry-logic": {
+      "total": 1,
+      "success": 0,
+      "totalReward": -5
+    },
+    "configure-auto-scaling": {
+      "total": 1,
+      "success": 1,
+      "totalReward": 12
+    },
+    "setup-cdn-configuration": {
+      "total": 1,
+      "success": 0,
+      "totalReward": -5
+    },
+    "integrate-stripe-payments": {
+      "total": 1,
+      "success": 0,
+      "totalReward": -5
+    },
+    "test-stripe-integration": {
+      "total": 1,
+      "success": 0,
+      "totalReward": -5
+    },
+    "setup-rate-limiting": {
+      "total": 1,
+      "success": 0,
+      "totalReward": -5
+    },
+    "setup-webhook-handlers": {
+      "total": 1,
+      "success": 0,
+      "totalReward": -5
+    },
+    "setup-github-actions": {
+      "total": 1,
+      "success": 0,
+      "totalReward": -5
+    },
+    "setup-supabase-database": {
+      "total": 1,
+      "success": 0,
+      "totalReward": -5
+    }
+  },
+  "trialResults": [
+    {
+      "trial": 1,
+      "action": "configure-github-oauth",
+      "success": true,
+      "reward": 12,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 0,
+      "epsilon": 0.199
+    },
+    {
+      "trial": 2,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 1,
+      "epsilon": 0.19800500000000001
+    },
+    {
+      "trial": 3,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 2,
+      "epsilon": 0.197014975
+    },
+    {
+      "trial": 4,
+      "action": "configure-github-oauth",
+      "success": true,
+      "reward": 12,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 0,
+      "epsilon": 0.19602990012500002
+    },
+    {
+      "trial": 5,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 1,
+      "epsilon": 0.19504975062437502
+    },
+    {
+      "trial": 6,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 2,
+      "epsilon": 0.19407450187125314
+    },
+    {
+      "trial": 7,
+      "action": "configure-supabase-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 3,
+      "epsilon": 0.19310412936189686
+    },
+    {
+      "trial": 8,
+      "action": "integrate-supabase-auth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 4,
+      "epsilon": 0.19213860871508737
+    },
+    {
+      "trial": 9,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 5,
+      "epsilon": 0.19117791567151193
+    },
+    {
+      "trial": 10,
+      "action": "setup-cursor-integration",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 6,
+      "epsilon": 0.19022202609315436
+    },
+    {
+      "trial": 11,
+      "action": "configure-github-oauth",
+      "success": true,
+      "reward": 12,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 0,
+      "epsilon": 0.18927091596268858
+    },
+    {
+      "trial": 12,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 1,
+      "epsilon": 0.18832456138287512
+    },
+    {
+      "trial": 13,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 2,
+      "epsilon": 0.18738293857596075
+    },
+    {
+      "trial": 14,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 3,
+      "epsilon": 0.18644602388308096
+    },
+    {
+      "trial": 15,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 4,
+      "epsilon": 0.18551379376366556
+    },
+    {
+      "trial": 16,
+      "action": "configure-github-oauth",
+      "success": true,
+      "reward": 12,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 0,
+      "epsilon": 0.18458622479484724
+    },
+    {
+      "trial": 17,
+      "action": "implement-retry-logic",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 1,
+      "epsilon": 0.183663293670873
+    },
+    {
+      "trial": 18,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 2,
+      "epsilon": 0.18274497720251864
+    },
+    {
+      "trial": 19,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 3,
+      "epsilon": 0.18183125231650604
+    },
+    {
+      "trial": 20,
+      "action": "configure-auto-scaling",
+      "success": true,
+      "reward": 12,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 0,
+      "epsilon": 0.18092209605492351
+    },
+    {
+      "trial": 21,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 1,
+      "epsilon": 0.1800174855746489
+    },
+    {
+      "trial": 22,
+      "action": "setup-cdn-configuration",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 2,
+      "epsilon": 0.17911739814677563
+    },
+    {
+      "trial": 23,
+      "action": "integrate-stripe-payments",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 3,
+      "epsilon": 0.17822181115604174
+    },
+    {
+      "trial": 24,
+      "action": "test-stripe-integration",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 4,
+      "epsilon": 0.17733070210026153
+    },
+    {
+      "trial": 25,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 5,
+      "epsilon": 0.17644404858976023
+    },
+    {
+      "trial": 26,
+      "action": "configure-supabase-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 6,
+      "epsilon": 0.17556182834681144
+    },
+    {
+      "trial": 27,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 7,
+      "epsilon": 0.1746840192050774
+    },
+    {
+      "trial": 28,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 8,
+      "epsilon": 0.173810599109052
+    },
+    {
+      "trial": 29,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 9,
+      "epsilon": 0.17294154611350673
+    },
+    {
+      "trial": 30,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 10,
+      "epsilon": 0.1720768383829392
+    },
+    {
+      "trial": 31,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 11,
+      "epsilon": 0.1712164541910245
+    },
+    {
+      "trial": 32,
+      "action": "configure-github-oauth",
+      "success": true,
+      "reward": 12,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 0,
+      "epsilon": 0.17036037192006936
+    },
+    {
+      "trial": 33,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 1,
+      "epsilon": 0.16950857006046902
+    },
+    {
+      "trial": 34,
+      "action": "configure-github-oauth",
+      "success": true,
+      "reward": 12,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 0,
+      "epsilon": 0.16866102721016668
+    },
+    {
+      "trial": 35,
+      "action": "configure-github-oauth",
+      "success": true,
+      "reward": 12,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 0,
+      "epsilon": 0.16781772207411585
+    },
+    {
+      "trial": 36,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 1,
+      "epsilon": 0.16697863346374528
+    },
+    {
+      "trial": 37,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 2,
+      "epsilon": 0.16614374029642656
+    },
+    {
+      "trial": 38,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 3,
+      "epsilon": 0.16531302159494443
+    },
+    {
+      "trial": 39,
+      "action": "setup-rate-limiting",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 4,
+      "epsilon": 0.16448645648696972
+    },
+    {
+      "trial": 40,
+      "action": "setup-webhook-handlers",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 5,
+      "epsilon": 0.16366402420453488
+    },
+    {
+      "trial": 41,
+      "action": "setup-github-actions",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 6,
+      "epsilon": 0.1628457040835122
+    },
+    {
+      "trial": 42,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 7,
+      "epsilon": 0.16203147556309463
+    },
+    {
+      "trial": 43,
+      "action": "configure-github-oauth",
+      "success": true,
+      "reward": 12,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 0,
+      "epsilon": 0.16122131818527916
+    },
+    {
+      "trial": 44,
+      "action": "setup-supabase-database",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 1,
+      "epsilon": 0.16041521159435276
+    },
+    {
+      "trial": 45,
+      "action": "configure-github-oauth",
+      "success": true,
+      "reward": 12,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 0,
+      "epsilon": 0.159613135536381
+    },
+    {
+      "trial": 46,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 1,
+      "epsilon": 0.15881506985869911
+    },
+    {
+      "trial": 47,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 2,
+      "epsilon": 0.15802099450940563
+    },
+    {
+      "trial": 48,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 3,
+      "epsilon": 0.1572308895368586
+    },
+    {
+      "trial": 49,
+      "action": "configure-github-oauth",
+      "success": false,
+      "reward": -5,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 4,
+      "epsilon": 0.1564447350891743
+    },
+    {
+      "trial": 50,
+      "action": "configure-github-oauth",
+      "success": true,
+      "reward": 12,
+      "duration": 0,
+      "error": null,
+      "consecutiveFailures": 0,
+      "epsilon": 0.15566251141372844
+    }
+  ]
+}

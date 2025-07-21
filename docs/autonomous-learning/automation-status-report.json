@@ -1,0 +1,216 @@
+{
+  "timestamp": "2025-07-21T05:14:10.667Z",
+  "summary": {
+    "totalServices": 4,
+    "configuredServices": 0,
+    "implementedWorkflows": 1
+  },
+  "serviceStatus": {
+    "github": {
+      "name": "GitHub",
+      "configFiles": [],
+      "environmentVariables": [],
+      "oauthStatus": "not-configured",
+      "apiKeys": [],
+      "status": "not-configured"
+    },
+    "vercel": {
+      "name": "Vercel",
+      "configFiles": [
+        "vercel.json",
+        ".vercel/project.json"
+      ],
+      "environmentVariables": [],
+      "oauthStatus": "not-configured",
+      "apiKeys": [],
+      "status": "partially-configured"
+    },
+    "supabase": {
+      "name": "Supabase",
+      "configFiles": [
+        ".env.local"
+      ],
+      "environmentVariables": [],
+      "oauthStatus": "not-configured",
+      "apiKeys": [],
+      "status": "partially-configured"
+    },
+    "stripe": {
+      "name": "Stripe",
+      "configFiles": [
+        ".env.local"
+      ],
+      "environmentVariables": [],
+      "oauthStatus": "not-configured",
+      "apiKeys": [],
+      "status": "partially-configured"
+    }
+  },
+  "missingConfigurations": {
+    "github": {
+      "name": "GitHub",
+      "missingKeys": [
+        "GITHUB_TOKEN",
+        "GITHUB_USERNAME"
+      ],
+      "missingFiles": [
+        ".github/workflows/*.yml",
+        ".github/config.yml"
+      ],
+      "missingOAuth": true,
+      "recommendations": [
+        {
+          "type": "environment-variables",
+          "description": "Configure missing environment variables: GITHUB_TOKEN, GITHUB_USERNAME",
+          "steps": [
+            "1. Go to GitHub Settings > Developer settings > Personal access tokens",
+            "2. Generate a new token with required scopes: repo, workflow, admin:org",
+            "3. Add the token to your environment variables as GITHUB_TOKEN",
+            "4. Set GITHUB_USERNAME to your GitHub username"
+          ]
+        },
+        {
+          "type": "oauth-setup",
+          "description": "Set up OAuth authentication",
+          "steps": [
+            "1. Go to GitHub Settings > Developer settings > OAuth Apps",
+            "2. Create a new OAuth App",
+            "3. Set required scopes: repo, workflow, admin:org",
+            "4. Configure callback URL",
+            "5. Save client ID and client secret"
+          ]
+        },
+        {
+          "type": "config-files",
+          "description": "Create missing configuration files: .github/workflows/*.yml, .github/config.yml",
+          "steps": [
+            "Create .github/workflows/*.yml configuration file",
+            "Create .github/config.yml configuration file"
+          ]
+        }
+      ]
+    },
+    "vercel": {
+      "name": "Vercel",
+      "missingKeys": [
+        "VERCEL_TOKEN",
+        "VERCEL_ORG_ID",
+        "VERCEL_PROJECT_ID"
+      ],
+      "missingFiles": [],
+      "missingOAuth": true,
+      "recommendations": [
+        {
+          "type": "environment-variables",
+          "description": "Configure missing environment variables: VERCEL_TOKEN, VERCEL_ORG_ID, VERCEL_PROJECT_ID",
+          "steps": [
+            "1. Go to Vercel dashboard > Settings > Tokens",
+            "2. Create a new token with appropriate permissions",
+            "3. Add the token to your environment variables as VERCEL_TOKEN",
+            "4. Get your organization ID and project ID from Vercel dashboard",
+            "5. Set VERCEL_ORG_ID and VERCEL_PROJECT_ID environment variables"
+          ]
+        },
+        {
+          "type": "oauth-setup",
+          "description": "Set up OAuth authentication",
+          "steps": [
+            "1. Go to Vercel dashboard > Settings > Integrations",
+            "2. Connect GitHub account",
+            "3. Authorize required permissions",
+            "4. Configure webhook settings"
+          ]
+        }
+      ]
+    },
+    "supabase": {
+      "name": "Supabase",
+      "missingKeys": [
+        "SUPABASE_URL",
+        "SUPABASE_ANON_KEY",
+        "SUPABASE_SERVICE_ROLE_KEY"
+      ],
+      "missingFiles": [
+        "supabase/config.toml"
+      ],
+      "missingOAuth": true,
+      "recommendations": [
+        {
+          "type": "environment-variables",
+          "description": "Configure missing environment variables: SUPABASE_URL, SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY",
+          "steps": [
+            "1. Go to your Supabase project dashboard",
+            "2. Navigate to Settings > API",
+            "3. Copy the project URL and anon key",
+            "4. Set SUPABASE_URL and SUPABASE_ANON_KEY environment variables",
+            "5. For service role key, go to Settings > API > Project API keys"
+          ]
+        },
+        {
+          "type": "oauth-setup",
+          "description": "Set up OAuth authentication",
+          "steps": [
+            "Set up OAuth for Supabase according to their documentation"
+          ]
+        },
+        {
+          "type": "config-files",
+          "description": "Create missing configuration files: supabase/config.toml",
+          "steps": [
+            "Create supabase/config.toml configuration file"
+          ]
+        }
+      ]
+    },
+    "stripe": {
+      "name": "Stripe",
+      "missingKeys": [
+        "STRIPE_SECRET_KEY",
+        "STRIPE_PUBLISHABLE_KEY",
+        "STRIPE_WEBHOOK_SECRET"
+      ],
+      "missingFiles": [
+        "stripe-config.json"
+      ],
+      "missingOAuth": true,
+      "recommendations": [
+        {
+          "type": "environment-variables",
+          "description": "Configure missing environment variables: STRIPE_SECRET_KEY, STRIPE_PUBLISHABLE_KEY, STRIPE_WEBHOOK_SECRET",
+          "steps": [
+            "1. Go to Stripe dashboard > Developers > API keys",
+            "2. Copy your publishable key and secret key",
+            "3. Set STRIPE_PUBLISHABLE_KEY and STRIPE_SECRET_KEY environment variables",
+            "4. For webhook secret, go to Developers > Webhooks and create a new endpoint"
+          ]
+        },
+        {
+          "type": "oauth-setup",
+          "description": "Set up OAuth authentication",
+          "steps": [
+            "Set up OAuth for Stripe according to their documentation"
+          ]
+        },
+        {
+          "type": "config-files",
+          "description": "Create missing configuration files: stripe-config.json",
+          "steps": [
+            "Create stripe-config.json configuration file"
+          ]
+        }
+      ]
+    }
+  },
+  "testResults": {
+    "timestamp": "2025-07-21T05:14:10.666Z",
+    "tests": [
+      {
+        "success": true,
+        "error": null
+      }
+    ]
+  },
+  "nextSteps": [
+    "Configure missing service credentials and OAuth tokens"
+  ]
+}

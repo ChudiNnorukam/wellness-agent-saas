@@ -1,0 +1,58 @@
+{
+  "type": "state_transition_diagram",
+  "title": "Action Transition Patterns",
+  "description": "How the agent transitions between different actions",
+  "data": {
+    "configure-github-oauth": {
+      "configure-github-oauth": 28,
+      "configure-supabase-oauth": 2,
+      "setup-cursor-integration": 1,
+      "implement-retry-logic": 1,
+      "configure-auto-scaling": 1,
+      "setup-cdn-configuration": 1,
+      "setup-rate-limiting": 1,
+      "setup-supabase-database": 1
+    },
+    "configure-supabase-oauth": {
+      "integrate-supabase-auth": 1,
+      "configure-github-oauth": 1
+    },
+    "integrate-supabase-auth": {
+      "configure-github-oauth": 1
+    },
+    "setup-cursor-integration": {
+      "configure-github-oauth": 1
+    },
+    "implement-retry-logic": {
+      "configure-github-oauth": 1
+    },
+    "configure-auto-scaling": {
+      "configure-github-oauth": 1
+    },
+    "setup-cdn-configuration": {
+      "integrate-stripe-payments": 1
+    },
+    "integrate-stripe-payments": {
+      "test-stripe-integration": 1
+    },
+    "test-stripe-integration": {
+      "configure-github-oauth": 1
+    },
+    "setup-rate-limiting": {
+      "setup-webhook-handlers": 1
+    },
+    "setup-webhook-handlers": {
+      "setup-github-actions": 1
+    },
+    "setup-github-actions": {
+      "configure-github-oauth": 1
+    },
+    "setup-supabase-database": {
+      "configure-github-oauth": 1
+    }
+  },
+  "metadata": {
+    "totalTransitions": 49,
+    "uniqueActions": 13
+  }
+}

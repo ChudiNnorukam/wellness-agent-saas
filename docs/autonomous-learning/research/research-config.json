@@ -1,0 +1,20 @@
+{
+  "searchEngines": [
+    "google",
+    "bing",
+    "duckduckgo"
+  ],
+  "researchTopics": [
+    "GitHub Pages deployment best practices",
+    "Vercel automation workflows",
+    "OAuth configuration for deployment",
+    "API key management automation",
+    "Workflow automation patterns"
+  ],
+  "documentationSources": [
+    "GitHub documentation",
+    "Vercel documentation",
+    "Supabase documentation",
+    "Stripe documentation"
+  ]
+}

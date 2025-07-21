@@ -1,0 +1,53 @@
+{
+  "totalTrials": 15,
+  "successfulTrials": 0,
+  "failedTrials": 15,
+  "successRate": 0,
+  "averageDuration": 694.1333333333333,
+  "phaseBreakdown": {
+    "exploration": 3,
+    "implementation": 1,
+    "research": 11
+  },
+  "strategyEffectiveness": {
+    "github-pages-exploration": {
+      "attempts": 3,
+      "successes": 0,
+      "successRate": 0
+    },
+    "workflow-automation-exploration": {
+      "attempts": 3,
+      "successes": 0,
+      "successRate": 0
+    },
+    "github-pages-implementation": {
+      "attempts": 1,
+      "successes": 0,
+      "successRate": 0
+    },
+    "workflow-automation-implementation": {
+      "attempts": 1,
+      "successes": 0,
+      "successRate": 0
+    }
+  },
+  "insights": [
+    "Strategy  needs improvement",
+    "Phase research encountered issues",
+    "Strategy  needs improvement",
+    "Phase research encountered issues",
+    "Strategy  needs improvement",
+    "Phase research encountered issues",
+    "Strategy  needs improvement",
+    "Phase research encountered issues",
+    "Strategy  needs improvement",
+    "Phase research encountered issues"
+  ],
+  "recommendations": [
+    "Investigate issues in research phase",
+    "Avoid  strategy in similar contexts",
+    "Investigate issues in research phase",
+    "Avoid  strategy in similar contexts",
+    "Investigate issues in research phase"
+  ]
+}

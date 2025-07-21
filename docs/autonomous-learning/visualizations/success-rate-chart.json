@@ -1,0 +1,196 @@
+{
+  "type": "success_rate_chart",
+  "title": "RL Agent Success Rate Over Time",
+  "description": "Rolling 5-trial success rate showing learning progress",
+  "data": [
+    {
+      "trial": 5,
+      "successRate": "40.0"
+    },
+    {
+      "trial": 6,
+      "successRate": "20.0"
+    },
+    {
+      "trial": 7,
+      "successRate": "20.0"
+    },
+    {
+      "trial": 8,
+      "successRate": "20.0"
+    },
+    {
+      "trial": 9,
+      "successRate": "0.0"
+    },
+    {
+      "trial": 10,
+      "successRate": "0.0"
+    },
+    {
+      "trial": 11,
+      "successRate": "20.0"
+    },
+    {
+      "trial": 12,
+      "successRate": "20.0"
+    },
+    {
+      "trial": 13,
+      "successRate": "20.0"
+    },
+    {
+      "trial": 14,
+      "successRate": "20.0"
+    },
+    {
+      "trial": 15,
+      "successRate": "20.0"
+    },
+    {
+      "trial": 16,
+      "successRate": "20.0"
+    },
+    {
+      "trial": 17,
+      "successRate": "20.0"
+    },
+    {
+      "trial": 18,
+      "successRate": "20.0"
+    },
+    {
+      "trial": 19,
+      "successRate": "20.0"
+    },
+    {
+      "trial": 20,
+      "successRate": "40.0"
+    },
+    {
+      "trial": 21,
+      "successRate": "20.0"
+    },
+    {
+      "trial": 22,
+      "successRate": "20.0"
+    },
+    {
+      "trial": 23,
+      "successRate": "20.0"
+    },
+    {
+      "trial": 24,
+      "successRate": "20.0"
+    },
+    {
+      "trial": 25,
+      "successRate": "0.0"
+    },
+    {
+      "trial": 26,
+      "successRate": "0.0"
+    },
+    {
+      "trial": 27,
+      "successRate": "0.0"
+    },
+    {
+      "trial": 28,
+      "successRate": "0.0"
+    },
+    {
+      "trial": 29,
+      "successRate": "0.0"
+    },
+    {
+      "trial": 30,
+      "successRate": "0.0"
+    },
+    {
+      "trial": 31,
+      "successRate": "0.0"
+    },
+    {
+      "trial": 32,
+      "successRate": "20.0"
+    },
+    {
+      "trial": 33,
+      "successRate": "20.0"
+    },
+    {
+      "trial": 34,
+      "successRate": "40.0"
+    },
+    {
+      "trial": 35,
+      "successRate": "60.0"
+    },
+    {
+      "trial": 36,
+      "successRate": "60.0"
+    },
+    {
+      "trial": 37,
+      "successRate": "40.0"
+    },
+    {
+      "trial": 38,
+      "successRate": "40.0"
+    },
+    {
+      "trial": 39,
+      "successRate": "20.0"
+    },
+    {
+      "trial": 40,
+      "successRate": "0.0"
+    },
+    {
+      "trial": 41,
+      "successRate": "0.0"
+    },
+    {
+      "trial": 42,
+      "successRate": "0.0"
+    },
+    {
+      "trial": 43,
+      "successRate": "20.0"
+    },
+    {
+      "trial": 44,
+      "successRate": "20.0"
+    },
+    {
+      "trial": 45,
+      "successRate": "40.0"
+    },
+    {
+      "trial": 46,
+      "successRate": "40.0"
+    },
+    {
+      "trial": 47,
+      "successRate": "40.0"
+    },
+    {
+      "trial": 48,
+      "successRate": "20.0"
+    },
+    {
+      "trial": 49,
+      "successRate": "20.0"
+    },
+    {
+      "trial": 50,
+      "successRate": "20.0"
+    }
+  ],
+  "metadata": {
+    "totalTrials": 50,
+    "overallSuccessRate": 22,
+    "windowSize": 5
+  }
+}

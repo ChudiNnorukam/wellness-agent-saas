@@ -1,0 +1,21 @@
+{
+  "successfulStrategies": [
+    "github-pages-branch",
+    "github-pages-actions"
+  ],
+  "failedStrategies": [
+    "github-pages-branch"
+  ],
+  "commonIssues": [
+    "GitHub Pages branch creation failed: Command failed: git checkout -b gh-pages"
+  ],
+  "lastAttempt": {
+    "number": 2,
+    "timestamp": "2025-07-21T05:14:09.549Z",
+    "strategy": "github-pages-actions",
+    "status": "success",
+    "errors": [],
+    "duration": 681
+  },
+  "successRate": 66.66666666666666
+}

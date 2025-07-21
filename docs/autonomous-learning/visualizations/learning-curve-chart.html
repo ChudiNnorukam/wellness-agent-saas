@@ -1,0 +1,394 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RL Agent Learning Curve</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .chart-container { margin: 20px 0; }
+        .metadata { background: #f5f5f5; padding: 15px; border-radius: 5px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>RL Agent Learning Curve</h1>
+        <p>Rewards, cumulative rewards, and exploration rate over time</p>
+        
+        <div class="chart-container">
+            <canvas id="chart"></canvas>
+        </div>
+        
+        <div class="metadata">
+            <h3>Metadata</h3>
+            <pre>{
+  "totalTrials": 50,
+  "finalCumulativeReward": -63,
+  "finalEpsilon": 0.15566251141372844
+}</pre>
+        </div>
+        
+        <div class="data">
+            <h3>Raw Data</h3>
+            <pre>[
+  {
+    "trial": 1,
+    "reward": 12,
+    "cumulativeReward": 12,
+    "epsilon": 0.199,
+    "consecutiveFailures": 0
+  },
+  {
+    "trial": 2,
+    "reward": -5,
+    "cumulativeReward": 7,
+    "epsilon": 0.19800500000000001,
+    "consecutiveFailures": 1
+  },
+  {
+    "trial": 3,
+    "reward": -5,
+    "cumulativeReward": 2,
+    "epsilon": 0.197014975,
+    "consecutiveFailures": 2
+  },
+  {
+    "trial": 4,
+    "reward": 12,
+    "cumulativeReward": 14,
+    "epsilon": 0.19602990012500002,
+    "consecutiveFailures": 0
+  },
+  {
+    "trial": 5,
+    "reward": -5,
+    "cumulativeReward": 9,
+    "epsilon": 0.19504975062437502,
+    "consecutiveFailures": 1
+  },
+  {
+    "trial": 6,
+    "reward": -5,
+    "cumulativeReward": 4,
+    "epsilon": 0.19407450187125314,
+    "consecutiveFailures": 2
+  },
+  {
+    "trial": 7,
+    "reward": -5,
+    "cumulativeReward": -1,
+    "epsilon": 0.19310412936189686,
+    "consecutiveFailures": 3
+  },
+  {
+    "trial": 8,
+    "reward": -5,
+    "cumulativeReward": -6,
+    "epsilon": 0.19213860871508737,
+    "consecutiveFailures": 4
+  },
+  {
+    "trial": 9,
+    "reward": -5,
+    "cumulativeReward": -11,
+    "epsilon": 0.19117791567151193,
+    "consecutiveFailures": 5
+  },
+  {
+    "trial": 10,
+    "reward": -5,
+    "cumulativeReward": -16,
+    "epsilon": 0.19022202609315436,
+    "consecutiveFailures": 6
+  },
+  {
+    "trial": 11,
+    "reward": 12,
+    "cumulativeReward": -4,
+    "epsilon": 0.18927091596268858,
+    "consecutiveFailures": 0
+  },
+  {
+    "trial": 12,
+    "reward": -5,
+    "cumulativeReward": -9,
+    "epsilon": 0.18832456138287512,
+    "consecutiveFailures": 1
+  },
+  {
+    "trial": 13,
+    "reward": -5,
+    "cumulativeReward": -14,
+    "epsilon": 0.18738293857596075,
+    "consecutiveFailures": 2
+  },
+  {
+    "trial": 14,
+    "reward": -5,
+    "cumulativeReward": -19,
+    "epsilon": 0.18644602388308096,
+    "consecutiveFailures": 3
+  },
+  {
+    "trial": 15,
+    "reward": -5,
+    "cumulativeReward": -24,
+    "epsilon": 0.18551379376366556,
+    "consecutiveFailures": 4
+  },
+  {
+    "trial": 16,
+    "reward": 12,
+    "cumulativeReward": -12,
+    "epsilon": 0.18458622479484724,
+    "consecutiveFailures": 0
+  },
+  {
+    "trial": 17,
+    "reward": -5,
+    "cumulativeReward": -17,
+    "epsilon": 0.183663293670873,
+    "consecutiveFailures": 1
+  },
+  {
+    "trial": 18,
+    "reward": -5,
+    "cumulativeReward": -22,
+    "epsilon": 0.18274497720251864,
+    "consecutiveFailures": 2
+  },
+  {
+    "trial": 19,
+    "reward": -5,
+    "cumulativeReward": -27,
+    "epsilon": 0.18183125231650604,
+    "consecutiveFailures": 3
+  },
+  {
+    "trial": 20,
+    "reward": 12,
+    "cumulativeReward": -15,
+    "epsilon": 0.18092209605492351,
+    "consecutiveFailures": 0
+  },
+  {
+    "trial": 21,
+    "reward": -5,
+    "cumulativeReward": -20,
+    "epsilon": 0.1800174855746489,
+    "consecutiveFailures": 1
+  },
+  {
+    "trial": 22,
+    "reward": -5,
+    "cumulativeReward": -25,
+    "epsilon": 0.17911739814677563,
+    "consecutiveFailures": 2
+  },
+  {
+    "trial": 23,
+    "reward": -5,
+    "cumulativeReward": -30,
+    "epsilon": 0.17822181115604174,
+    "consecutiveFailures": 3
+  },
+  {
+    "trial": 24,
+    "reward": -5,
+    "cumulativeReward": -35,
+    "epsilon": 0.17733070210026153,
+    "consecutiveFailures": 4
+  },
+  {
+    "trial": 25,
+    "reward": -5,
+    "cumulativeReward": -40,
+    "epsilon": 0.17644404858976023,
+    "consecutiveFailures": 5
+  },
+  {
+    "trial": 26,
+    "reward": -5,
+    "cumulativeReward": -45,
+    "epsilon": 0.17556182834681144,
+    "consecutiveFailures": 6
+  },
+  {
+    "trial": 27,
+    "reward": -5,
+    "cumulativeReward": -50,
+    "epsilon": 0.1746840192050774,
+    "consecutiveFailures": 7
+  },
+  {
+    "trial": 28,
+    "reward": -5,
+    "cumulativeReward": -55,
+    "epsilon": 0.173810599109052,
+    "consecutiveFailures": 8
+  },
+  {
+    "trial": 29,
+    "reward": -5,
+    "cumulativeReward": -60,
+    "epsilon": 0.17294154611350673,
+    "consecutiveFailures": 9
+  },
+  {
+    "trial": 30,
+    "reward": -5,
+    "cumulativeReward": -65,
+    "epsilon": 0.1720768383829392,
+    "consecutiveFailures": 10
+  },
+  {
+    "trial": 31,
+    "reward": -5,
+    "cumulativeReward": -70,
+    "epsilon": 0.1712164541910245,
+    "consecutiveFailures": 11
+  },
+  {
+    "trial": 32,
+    "reward": 12,
+    "cumulativeReward": -58,
+    "epsilon": 0.17036037192006936,
+    "consecutiveFailures": 0
+  },
+  {
+    "trial": 33,
+    "reward": -5,
+    "cumulativeReward": -63,
+    "epsilon": 0.16950857006046902,
+    "consecutiveFailures": 1
+  },
+  {
+    "trial": 34,
+    "reward": 12,
+    "cumulativeReward": -51,
+    "epsilon": 0.16866102721016668,
+    "consecutiveFailures": 0
+  },
+  {
+    "trial": 35,
+    "reward": 12,
+    "cumulativeReward": -39,
+    "epsilon": 0.16781772207411585,
+    "consecutiveFailures": 0
+  },
+  {
+    "trial": 36,
+    "reward": -5,
+    "cumulativeReward": -44,
+    "epsilon": 0.16697863346374528,
+    "consecutiveFailures": 1
+  },
+  {
+    "trial": 37,
+    "reward": -5,
+    "cumulativeReward": -49,
+    "epsilon": 0.16614374029642656,
+    "consecutiveFailures": 2
+  },
+  {
+    "trial": 38,
+    "reward": -5,
+    "cumulativeReward": -54,
+    "epsilon": 0.16531302159494443,
+    "consecutiveFailures": 3
+  },
+  {
+    "trial": 39,
+    "reward": -5,
+    "cumulativeReward": -59,
+    "epsilon": 0.16448645648696972,
+    "consecutiveFailures": 4
+  },
+  {
+    "trial": 40,
+    "reward": -5,
+    "cumulativeReward": -64,
+    "epsilon": 0.16366402420453488,
+    "consecutiveFailures": 5
+  },
+  {
+    "trial": 41,
+    "reward": -5,
+    "cumulativeReward": -69,
+    "epsilon": 0.1628457040835122,
+    "consecutiveFailures": 6
+  },
+  {
+    "trial": 42,
+    "reward": -5,
+    "cumulativeReward": -74,
+    "epsilon": 0.16203147556309463,
+    "consecutiveFailures": 7
+  },
+  {
+    "trial": 43,
+    "reward": 12,
+    "cumulativeReward": -62,
+    "epsilon": 0.16122131818527916,
+    "consecutiveFailures": 0
+  },
+  {
+    "trial": 44,
+    "reward": -5,
+    "cumulativeReward": -67,
+    "epsilon": 0.16041521159435276,
+    "consecutiveFailures": 1
+  },
+  {
+    "trial": 45,
+    "reward": 12,
+    "cumulativeReward": -55,
+    "epsilon": 0.159613135536381,
+    "consecutiveFailures": 0
+  },
+  {
+    "trial": 46,
+    "reward": -5,
+    "cumulativeReward": -60,
+    "epsilon": 0.15881506985869911,
+    "consecutiveFailures": 1
+  },
+  {
+    "trial": 47,
+    "reward": -5,
+    "cumulativeReward": -65,
+    "epsilon": 0.15802099450940563,
+    "consecutiveFailures": 2
+  },
+  {
+    "trial": 48,
+    "reward": -5,
+    "cumulativeReward": -70,
+    "epsilon": 0.1572308895368586,
+    "consecutiveFailures": 3
+  },
+  {
+    "trial": 49,
+    "reward": -5,
+    "cumulativeReward": -75,
+    "epsilon": 0.1564447350891743,
+    "consecutiveFailures": 4
+  },
+  {
+    "trial": 50,
+    "reward": 12,
+    "cumulativeReward": -63,
+    "epsilon": 0.15566251141372844,
+    "consecutiveFailures": 0
+  }
+]</pre>
+        </div>
+    </div>
+    
+    <script>
+        // Chart.js configuration would go here
+        console.log('Chart data:', {"type":"learning_curve_chart","title":"RL Agent Learning Curve","description":"Rewards, cumulative rewards, and exploration rate over time","data":[{"trial":1,"reward":12,"cumulativeReward":12,"epsilon":0.199,"consecutiveFailures":0},{"trial":2,"reward":-5,"cumulativeReward":7,"epsilon":0.19800500000000001,"consecutiveFailures":1},{"trial":3,"reward":-5,"cumulativeReward":2,"epsilon":0.197014975,"consecutiveFailures":2},{"trial":4,"reward":12,"cumulativeReward":14,"epsilon":0.19602990012500002,"consecutiveFailures":0},{"trial":5,"reward":-5,"cumulativeReward":9,"epsilon":0.19504975062437502,"consecutiveFailures":1},{"trial":6,"reward":-5,"cumulativeReward":4,"epsilon":0.19407450187125314,"consecutiveFailures":2},{"trial":7,"reward":-5,"cumulativeReward":-1,"epsilon":0.19310412936189686,"consecutiveFailures":3},{"trial":8,"reward":-5,"cumulativeReward":-6,"epsilon":0.19213860871508737,"consecutiveFailures":4},{"trial":9,"reward":-5,"cumulativeReward":-11,"epsilon":0.19117791567151193,"consecutiveFailures":5},{"trial":10,"reward":-5,"cumulativeReward":-16,"epsilon":0.19022202609315436,"consecutiveFailures":6},{"trial":11,"reward":12,"cumulativeReward":-4,"epsilon":0.18927091596268858,"consecutiveFailures":0},{"trial":12,"reward":-5,"cumulativeReward":-9,"epsilon":0.18832456138287512,"consecutiveFailures":1},{"trial":13,"reward":-5,"cumulativeReward":-14,"epsilon":0.18738293857596075,"consecutiveFailures":2},{"trial":14,"reward":-5,"cumulativeReward":-19,"epsilon":0.18644602388308096,"consecutiveFailures":3},{"trial":15,"reward":-5,"cumulativeReward":-24,"epsilon":0.18551379376366556,"consecutiveFailures":4},{"trial":16,"reward":12,"cumulativeReward":-12,"epsilon":0.18458622479484724,"consecutiveFailures":0},{"trial":17,"reward":-5,"cumulativeReward":-17,"epsilon":0.183663293670873,"consecutiveFailures":1},{"trial":18,"reward":-5,"cumulativeReward":-22,"epsilon":0.18274497720251864,"consecutiveFailures":2},{"trial":19,"reward":-5,"cumulativeReward":-27,"epsilon":0.18183125231650604,"consecutiveFailures":3},{"trial":20,"reward":12,"cumulativeReward":-15,"epsilon":0.18092209605492351,"consecutiveFailures":0},{"trial":21,"reward":-5,"cumulativeReward":-20,"epsilon":0.1800174855746489,"consecutiveFailures":1},{"trial":22,"reward":-5,"cumulativeReward":-25,"epsilon":0.17911739814677563,"consecutiveFailures":2},{"trial":23,"reward":-5,"cumulativeReward":-30,"epsilon":0.17822181115604174,"consecutiveFailures":3},{"trial":24,"reward":-5,"cumulativeReward":-35,"epsilon":0.17733070210026153,"consecutiveFailures":4},{"trial":25,"reward":-5,"cumulativeReward":-40,"epsilon":0.17644404858976023,"consecutiveFailures":5},{"trial":26,"reward":-5,"cumulativeReward":-45,"epsilon":0.17556182834681144,"consecutiveFailures":6},{"trial":27,"reward":-5,"cumulativeReward":-50,"epsilon":0.1746840192050774,"consecutiveFailures":7},{"trial":28,"reward":-5,"cumulativeReward":-55,"epsilon":0.173810599109052,"consecutiveFailures":8},{"trial":29,"reward":-5,"cumulativeReward":-60,"epsilon":0.17294154611350673,"consecutiveFailures":9},{"trial":30,"reward":-5,"cumulativeReward":-65,"epsilon":0.1720768383829392,"consecutiveFailures":10},{"trial":31,"reward":-5,"cumulativeReward":-70,"epsilon":0.1712164541910245,"consecutiveFailures":11},{"trial":32,"reward":12,"cumulativeReward":-58,"epsilon":0.17036037192006936,"consecutiveFailures":0},{"trial":33,"reward":-5,"cumulativeReward":-63,"epsilon":0.16950857006046902,"consecutiveFailures":1},{"trial":34,"reward":12,"cumulativeReward":-51,"epsilon":0.16866102721016668,"consecutiveFailures":0},{"trial":35,"reward":12,"cumulativeReward":-39,"epsilon":0.16781772207411585,"consecutiveFailures":0},{"trial":36,"reward":-5,"cumulativeReward":-44,"epsilon":0.16697863346374528,"consecutiveFailures":1},{"trial":37,"reward":-5,"cumulativeReward":-49,"epsilon":0.16614374029642656,"consecutiveFailures":2},{"trial":38,"reward":-5,"cumulativeReward":-54,"epsilon":0.16531302159494443,"consecutiveFailures":3},{"trial":39,"reward":-5,"cumulativeReward":-59,"epsilon":0.16448645648696972,"consecutiveFailures":4},{"trial":40,"reward":-5,"cumulativeReward":-64,"epsilon":0.16366402420453488,"consecutiveFailures":5},{"trial":41,"reward":-5,"cumulativeReward":-69,"epsilon":0.1628457040835122,"consecutiveFailures":6},{"trial":42,"reward":-5,"cumulativeReward":-74,"epsilon":0.16203147556309463,"consecutiveFailures":7},{"trial":43,"reward":12,"cumulativeReward":-62,"epsilon":0.16122131818527916,"consecutiveFailures":0},{"trial":44,"reward":-5,"cumulativeReward":-67,"epsilon":0.16041521159435276,"consecutiveFailures":1},{"trial":45,"reward":12,"cumulativeReward":-55,"epsilon":0.159613135536381,"consecutiveFailures":0},{"trial":46,"reward":-5,"cumulativeReward":-60,"epsilon":0.15881506985869911,"consecutiveFailures":1},{"trial":47,"reward":-5,"cumulativeReward":-65,"epsilon":0.15802099450940563,"consecutiveFailures":2},{"trial":48,"reward":-5,"cumulativeReward":-70,"epsilon":0.1572308895368586,"consecutiveFailures":3},{"trial":49,"reward":-5,"cumulativeReward":-75,"epsilon":0.1564447350891743,"consecutiveFailures":4},{"trial":50,"reward":12,"cumulativeReward":-63,"epsilon":0.15566251141372844,"consecutiveFailures":0}],"metadata":{"totalTrials":50,"finalCumulativeReward":-63,"finalEpsilon":0.15566251141372844}});
+    </script>
+</body>
+</html>
