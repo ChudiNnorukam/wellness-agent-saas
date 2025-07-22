@@ -52,7 +52,4 @@
     "@types/react-dom": "^18.0.0",
     "typescript": "^5.0.0"
   },
-  "keywords": ["ai", "agents", "saas", "optimization", "sales"],
-  "author": "Chudi Nnorukam",
-  "license": "MIT"
-}
+  "keywords": ["ai", "agents", "saas", "optimizati
