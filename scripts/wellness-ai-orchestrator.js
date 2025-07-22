@@ -3,6 +3,8 @@
 const { createClient } = require('@supabase/supabase-js');
 const Stripe = require('stripe');
 const { GitManagementAgent } = require('./agents/GitManagementAgent');
+const { ValidationAgent } = require('./agents/ValidationAgent');
+const { ResearchAgent } = require('./agents/ResearchAgent');
 require('dotenv').config();
 
 // Initialize Supabase client
@@ -24,6 +26,9 @@ class WellnessAIOrchestrator {
       failedActions: 0
     };
     this.gitAgent = new GitManagementAgent();
+    this.validationAgent = new ValidationAgent();
+    this.researchAgent = new ResearchAgent();
+    this.deploymentUrl = 'https://wellness-agent-saas-ybpb.vercel.app';
   }
 
   async start() {
@@ -81,6 +86,9 @@ class WellnessAIOrchestrator {
       this.performance.totalActions++;
     }
 
+    // Validate changes before committing
+    await this.validateBeforeCommit();
+    
     // Auto-commit and push changes after each cycle
     await this.autoCommitCycleChanges();
     
@@ -254,6 +262,51 @@ class WellnessAIOrchestrator {
       } catch (error) {
         console.log(`📋 Table ${table} will be created when needed`);
       }
+    }
+  }
+
+  async validateBeforeCommit() {
+    try {
+      console.log('\n🔍 Validating changes before commit...');
+      
+      // Run comprehensive validation
+      const validationResults = await this.validationAgent.runFullValidation(this.deploymentUrl);
+      
+      if (validationResults) {
+        console.log('✅ Validation passed - proceeding with commit');
+        
+        // Log successful validation
+        await this.gitAgent.execute('log_agent_activity', {
+          agentName: 'ValidationAgent',
+          action: 'pre_commit_validation',
+          result: `Validation passed: ${validationResults.codeValidation.passed}/${validationResults.codeValidation.total} tests`,
+          timestamp: new Date()
+        });
+      }
+    } catch (error) {
+      console.error(`❌ Validation failed: ${error.message}`);
+      
+      // Research the error and learn from it
+      await this.researchAgent.learnFromError(error, {
+        cycle: this.cycleCount,
+        action: 'pre_commit_validation',
+        timestamp: new Date().toISOString()
+      });
+      
+      // Generate improvement plan
+      const improvementPlan = await this.researchAgent.generateImprovementPlan();
+      console.log('📋 Improvement plan generated based on validation failure');
+      
+      // Log the validation failure
+      await this.gitAgent.execute('log_agent_activity', {
+        agentName: 'ValidationAgent',
+        action: 'validation_failed',
+        result: `Validation failed: ${error.message}`,
+        timestamp: new Date()
+      });
+      
+      // Don't proceed with commit if validation fails
+      throw new Error(`Pre-commit validation failed: ${error.message}`);
     }
   }
 
