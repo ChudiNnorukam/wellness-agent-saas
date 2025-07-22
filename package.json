@@ -4,7 +4,11 @@
   "description": "Autonomous AI agents for wellness SaaS optimization",
   "main": "scripts/orchestrator.js",
   "scripts": {
-    "start": "node scripts/orchestrator.js",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "agent-start": "node scripts/orchestrator.js",
     "test": "node scripts/test-improvements.js",
     "sales": "node scripts/sales-optimizer.js",
     "setup": "node scripts/setup-integrations.js",
@@ -22,6 +26,10 @@
     "git-auto": "node scripts/agents/GitManagementAgent.js"
   },
   "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "lucide-react": "^0.294.0",
     "stripe": "^14.0.0",
     "googleapis": "^128.0.0",
     "mysql2": "^3.6.0",
@@ -30,10 +38,18 @@
     "node-cron": "^3.0.3",
     "winston": "^3.11.0",
     "open": "^9.1.0",
-    "@supabase/supabase-js": "^2.39.0"
+    "@supabase/supabase-js": "^2.39.0",
+    "@supabase/ssr": "^0.1.0"
   },
   "devDependencies": {
-    "nodemon": "^3.0.0"
+    "nodemon": "^3.0.0",
+    "tailwindcss": "^3.3.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "typescript": "^5.0.0"
   },
   "keywords": ["ai", "agents", "saas", "optimization", "sales"],
   "author": "Chudi Nnorukam",
