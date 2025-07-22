@@ -16,7 +16,10 @@
     "quick-nav": "node scripts/quick-navigate.js",
     "nav": "node scripts/simple-navigate.js",
     "autonomy": "node scripts/setup-autonomy-creds.js",
-    "wellness": "node scripts/wellness-ai-orchestrator.js"
+    "wellness": "node scripts/wellness-ai-orchestrator.js",
+    "track": "node scripts/improvement-tracker.js",
+    "report": "node scripts/improvement-tracker.js report",
+    "git-auto": "node scripts/agents/GitManagementAgent.js"
   },
   "dependencies": {
     "stripe": "^14.0.0",

@@ -2,6 +2,7 @@
 
 const { createClient } = require('@supabase/supabase-js');
 const Stripe = require('stripe');
+const { GitManagementAgent } = require('./agents/GitManagementAgent');
 require('dotenv').config();
 
 // Initialize Supabase client
@@ -22,6 +23,7 @@ class WellnessAIOrchestrator {
       successfulActions: 0,
       failedActions: 0
     };
+    this.gitAgent = new GitManagementAgent();
   }
 
   async start() {
@@ -62,6 +64,15 @@ class WellnessAIOrchestrator {
         console.log(`\n🔄 Executing: ${name} - ${action}`);
         const result = await this.executeWellnessAction(name, action);
         console.log(`✅ ${name} completed: ${result.message}`);
+        
+        // Log agent activity
+        await this.gitAgent.execute('log_agent_activity', {
+          agentName: name,
+          action: action,
+          result: result.message,
+          timestamp: new Date()
+        });
+        
         this.performance.successfulActions++;
       } catch (error) {
         console.error(`❌ ${name} failed: ${error.message}`);
@@ -70,6 +81,9 @@ class WellnessAIOrchestrator {
       this.performance.totalActions++;
     }
 
+    // Auto-commit and push changes after each cycle
+    await this.autoCommitCycleChanges();
+    
     console.log(`\n📊 Cycle Performance: ${this.performance.successfulActions}/${this.performance.totalActions} successful`);
   }
 
@@ -240,6 +254,40 @@ class WellnessAIOrchestrator {
       } catch (error) {
         console.log(`📋 Table ${table} will be created when needed`);
       }
+    }
+  }
+
+  async autoCommitCycleChanges() {
+    try {
+      console.log('\n📝 Auto-committing cycle changes...');
+      
+      // Check if there are any changes to commit
+      const { execSync } = require('child_process');
+      const status = execSync('git status --porcelain', { encoding: 'utf8' });
+      
+      if (!status.trim()) {
+        console.log('📝 No changes to commit in this cycle');
+        return;
+      }
+
+      // Auto-commit changes with wellness cycle context
+      const result = await this.gitAgent.execute('auto_commit_changes', {
+        agentName: 'WellnessAI Orchestrator',
+        action: 'wellness_cycle_complete',
+        result: `Completed wellness cycle ${this.cycleCount} with ${this.performance.successfulActions} successful actions`,
+        impact: this.performance.successfulActions * 2 // Higher impact for successful cycles
+      });
+
+      console.log(`✅ ${result.message}`);
+      
+      // Create improvement summary every 5 cycles
+      if (this.cycleCount % 5 === 0) {
+        await this.gitAgent.execute('create_improvement_summary', { timeframe: '24h' });
+        console.log('📊 Created improvement summary');
+      }
+      
+    } catch (error) {
+      console.error(`❌ Auto-commit failed: ${error.message}`);
     }
   }
 }
