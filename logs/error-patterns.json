@@ -8,5 +8,15 @@
     "timestamp": "2025-07-22T05:04:07.708Z",
     "pattern": "build",
     "prevention": "Always run local build test before committing"
+  },
+  {
+    "error": "Validation failed: 6 code tests failed, deployment: OK",
+    "context": {
+      "context": "test_failure",
+      "timestamp": "2025-07-22T05:06:07.832Z"
+    },
+    "timestamp": "2025-07-22T05:06:07.832Z",
+    "pattern": "deployment",
+    "prevention": "Validate deployment configuration and test deployment URL"
   }
 ]

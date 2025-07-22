@@ -1,0 +1,52 @@
+[
+  {
+    "timestamp": "2025-07-22T05:06:07.832Z",
+    "results": {
+      "codeValidation": {
+        "passed": 4,
+        "failed": 6,
+        "total": 5
+      },
+      "gitStatus": {
+        "hasChanges": false,
+        "branch": "gh-pages",
+        "lastCommit": "7ee9b2f 🤖 WellnessAI Orchestrator - wellness_cycle_complete: Completed wellness cycle 21 with 105 successful actions (HIGH impact)",
+        "changeCount": 0
+      },
+      "deploymentValidation": null
+    },
+    "failedTests": [
+      {
+        "test": "Build Test",
+        "error": "Build failed: spawnSync /bin/sh ETIMEDOUT",
+        "timestamp": "2025-07-22T05:03:07.667Z"
+      },
+      {
+        "test": "Lint Test",
+        "error": "Lint failed: spawnSync /bin/sh ETIMEDOUT",
+        "timestamp": "2025-07-22T05:03:37.693Z"
+      },
+      {
+        "test": "Type Check",
+        "error": "Type check failed: spawnSync /bin/sh ETIMEDOUT",
+        "timestamp": "2025-07-22T05:04:07.705Z"
+      },
+      {
+        "test": "Build Test",
+        "error": "Build failed: spawnSync /bin/sh ETIMEDOUT",
+        "timestamp": "2025-07-22T05:05:07.723Z"
+      },
+      {
+        "test": "Lint Test",
+        "error": "Lint failed: spawnSync /bin/sh ETIMEDOUT",
+        "timestamp": "2025-07-22T05:05:37.732Z"
+      },
+      {
+        "test": "Type Check",
+        "error": "Type check failed: spawnSync /bin/sh ETIMEDOUT",
+        "timestamp": "2025-07-22T05:06:07.753Z"
+      }
+    ],
+    "deploymentChecks": []
+  }
+]
