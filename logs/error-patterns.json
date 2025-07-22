@@ -1,0 +1,12 @@
+[
+  {
+    "error": "Build failed: Module not found",
+    "context": {
+      "context": "test_validation",
+      "timestamp": "2025-07-22T05:04:07.708Z"
+    },
+    "timestamp": "2025-07-22T05:04:07.708Z",
+    "pattern": "build",
+    "prevention": "Always run local build test before committing"
+  }
+]
