@@ -23,7 +23,8 @@
     "wellness": "node scripts/wellness-ai-orchestrator.js",
     "track": "node scripts/improvement-tracker.js",
     "report": "node scripts/improvement-tracker.js report",
-    "git-auto": "node scripts/agents/GitManagementAgent.js"
+    "git-auto": "node scripts/agents/GitManagementAgent.js",
+    "test-validation": "node scripts/test-validation-system.js"
   },
   "dependencies": {
     "next": "^14.0.0",
