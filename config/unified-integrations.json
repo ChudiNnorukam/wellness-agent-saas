@@ -1,0 +1,197 @@
+{
+  "project": {
+    "name": "WellnessAI - Healing Studio Portfolio & Micro SaaS",
+    "founder": "Chudi Nnorukam",
+    "description": "AI-powered wellness planning platform with comprehensive business integrations",
+    "version": "2.0.0"
+  },
+  "integrations": {
+    "authentication": {
+      "supabase": {
+        "name": "Supabase Auth & Database",
+        "purpose": "User authentication, database, and real-time features",
+        "config": {
+          "url": "NEXT_PUBLIC_SUPABASE_URL",
+          "anon_key": "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+          "service_role_key": "SUPABASE_SERVICE_ROLE_KEY"
+        },
+        "features": [
+          "User registration and login",
+          "JWT token management",
+          "Row Level Security (RLS)",
+          "Real-time subscriptions",
+          "Database migrations"
+        ],
+        "status": "configured"
+      }
+    },
+    "payments": {
+      "stripe": {
+        "name": "Stripe Payment Processing",
+        "purpose": "Subscription management and payment processing",
+        "config": {
+          "secret_key": "STRIPE_SECRET_KEY",
+          "publishable_key": "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY",
+          "webhook_secret": "STRIPE_WEBHOOK_SECRET"
+        },
+        "products": {
+          "basic": {
+            "name": "WellnessAI Basic",
+            "price": 9.99,
+            "interval": "month",
+            "features": ["5 plans per month", "Basic wellness guidance", "Email support"]
+          },
+          "premium": {
+            "name": "WellnessAI Premium", 
+            "price": 19.99,
+            "interval": "month",
+            "features": ["Unlimited plans", "Advanced AI insights", "Priority support", "Export options"]
+          }
+        },
+        "webhooks": [
+          "customer.subscription.created",
+          "customer.subscription.updated", 
+          "customer.subscription.deleted",
+          "invoice.payment_succeeded",
+          "invoice.payment_failed"
+        ],
+        "status": "configured"
+      }
+    },
+    "analytics": {
+      "google_analytics": {
+        "name": "Google Analytics v4",
+        "purpose": "Website traffic and user behavior tracking",
+        "config": {
+          "view_id": "GOOGLE_ANALYTICS_VIEW_ID",
+          "service_account": "GOOGLE_APPLICATION_CREDENTIALS"
+        },
+        "events": [
+          "plan_generated",
+          "subscription_started",
+          "user_registered",
+          "feature_used"
+        ],
+        "status": "pending_setup"
+      }
+    },
+    "ai_agents": {
+      "sales_optimizer": {
+        "name": "Sales Optimization Agent",
+        "purpose": "Autonomous pricing and conversion optimization",
+        "features": [
+          "Real-time conversion analysis",
+          "Dynamic pricing recommendations",
+          "Churn rate monitoring",
+          "Revenue projection modeling"
+        ],
+        "data_sources": ["stripe", "google_analytics", "mysql"],
+        "status": "active"
+      },
+      "traffic_agent": {
+        "name": "Traffic Generation Agent", 
+        "purpose": "SEO and marketing optimization",
+        "features": [
+          "Keyword research and optimization",
+          "Content performance analysis",
+          "Backlink monitoring",
+          "Social media automation"
+        ],
+        "status": "active"
+      },
+      "ui_agent": {
+        "name": "UI/UX Optimization Agent",
+        "purpose": "User experience and interface optimization",
+        "features": [
+          "User behavior analysis",
+          "A/B testing recommendations",
+          "Conversion funnel optimization",
+          "Accessibility improvements"
+        ],
+        "status": "active"
+      }
+    },
+    "health_integrations": {
+      "apple_health": {
+        "name": "Apple HealthKit",
+        "purpose": "Health data integration for personalized plans",
+        "status": "planned"
+      },
+      "google_fit": {
+        "name": "Google Fit",
+        "purpose": "Fitness data integration",
+        "status": "planned"
+      },
+      "fitbit": {
+        "name": "Fitbit API",
+        "purpose": "Wearable device data integration",
+        "status": "planned"
+      }
+    },
+    "deployment": {
+      "vercel": {
+        "name": "Vercel Hosting",
+        "purpose": "Application hosting and deployment",
+        "config": {
+          "domain": "NEXT_PUBLIC_APP_URL",
+          "environment": "NODE_ENV"
+        },
+        "features": [
+          "Automatic deployments",
+          "Edge functions",
+          "CDN optimization",
+          "SSL certificates"
+        ],
+        "status": "configured"
+      }
+    },
+    "monitoring": {
+      "winston": {
+        "name": "Winston Logging",
+        "purpose": "Structured logging and error tracking",
+        "status": "configured"
+      },
+      "sentry": {
+        "name": "Sentry Error Tracking",
+        "purpose": "Error monitoring and performance tracking",
+        "status": "planned"
+      }
+    }
+  },
+  "business_metrics": {
+    "tracking": [
+      "Monthly Recurring Revenue (MRR)",
+      "Customer Acquisition Cost (CAC)",
+      "Customer Lifetime Value (CLV)",
+      "Churn Rate",
+      "Conversion Rate",
+      "User Engagement Metrics"
+    ],
+    "optimization_targets": {
+      "conversion_rate": "5%",
+      "churn_rate": "< 5%",
+      "mrr_growth": "20% monthly",
+      "user_satisfaction": "4.5+ stars"
+    }
+  },
+  "setup_instructions": {
+    "phase_1": [
+      "Configure Supabase project and run migrations",
+      "Set up Stripe products and webhooks",
+      "Deploy to Vercel with environment variables",
+      "Test authentication and payment flows"
+    ],
+    "phase_2": [
+      "Set up Google Analytics tracking",
+      "Configure AI agent monitoring",
+      "Implement health data integrations",
+      "Add error tracking and monitoring"
+    ],
+    "phase_3": [
+      "Optimize for SEO and performance",
+      "Implement advanced analytics",
+      "Add A/B testing framework",
+      "Scale infrastructure as needed"
+    ]
+  }
+} 

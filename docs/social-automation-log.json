@@ -1,0 +1,113 @@
+[
+  {
+    "timestamp": "2025-07-21T16:12:21.526Z",
+    "type": "post",
+    "content": {
+      "type": "user_success",
+      "title": "🎉 User Success Story",
+      "platforms": [
+        "twitter",
+        "linkedin",
+        "instagram"
+      ],
+      "content": "Incredible to see Emma from London achieve their wellness goals! From low energy levels to building consistent habits - this is why we do what we do. Your journey inspires us all! #WellnessJourney #SuccessStory"
+    },
+    "metrics": {
+      "reach": 465,
+      "engagement": 40,
+      "clicks": 33,
+      "shares": 3,
+      "timestamp": "2025-07-21T16:12:21.524Z"
+    },
+    "scheduling": {
+      "twitter": {
+        "success": true,
+        "scheduledAt": "2025-07-21T16:12:18.022Z",
+        "platform": "twitter"
+      },
+      "linkedin": {
+        "success": true,
+        "scheduledAt": "2025-07-21T16:12:20.023Z",
+        "platform": "linkedin"
+      },
+      "instagram": {
+        "success": true,
+        "scheduledAt": "2025-07-21T16:12:21.524Z",
+        "platform": "instagram"
+      }
+    },
+    "brandVoice": "# Chudi's Brand Voice & Content Guidelines\n\n## 🎯 Core Personality\n**Authentic Tech Entrepreneur wit..."
+  },
+  {
+    "timestamp": "2025-07-21T16:18:25.009Z",
+    "type": "post",
+    "content": {
+      "type": "community_highlight",
+      "title": "🌟 Community Spotlight",
+      "platforms": [
+        "twitter",
+        "linkedin",
+        "instagram"
+      ],
+      "content": "Our wellness community is growing! Partnership announcements. Together, we're building a healthier future. Join the conversation! #WellnessCommunity #HealthTech"
+    },
+    "metrics": {
+      "reach": 888,
+      "engagement": 45,
+      "clicks": 41,
+      "shares": 14,
+      "timestamp": "2025-07-21T16:18:25.004Z"
+    },
+    "scheduling": {
+      "twitter": {
+        "success": true,
+        "scheduledAt": "2025-07-21T16:18:21.500Z",
+        "platform": "twitter"
+      },
+      "linkedin": {
+        "success": true,
+        "scheduledAt": "2025-07-21T16:18:23.501Z",
+        "platform": "linkedin"
+      },
+      "instagram": {
+        "success": false,
+        "scheduledAt": "2025-07-21T16:18:25.003Z",
+        "platform": "instagram"
+      }
+    },
+    "brandVoice": "# Chudi's Brand Voice & Content Guidelines\n\n## 🎯 Core Personality\n**Authentic Tech Entrepreneur wit..."
+  },
+  {
+    "timestamp": "2025-07-21T16:18:27.416Z",
+    "type": "post",
+    "content": {
+      "type": "tech_insight",
+      "title": "🚀 Tech Insight",
+      "platforms": [
+        "twitter",
+        "linkedin"
+      ],
+      "content": "How AI is revolutionizing personal wellness: Community-driven health insights. The future of health is personalized, accessible, and data-driven. #AI #WellnessTech #Innovation"
+    },
+    "metrics": {
+      "reach": 491,
+      "engagement": 32,
+      "clicks": 33,
+      "shares": 5,
+      "timestamp": "2025-07-21T16:18:27.413Z"
+    },
+    "scheduling": {
+      "twitter": {
+        "success": true,
+        "scheduledAt": "2025-07-21T16:18:25.412Z",
+        "platform": "twitter"
+      },
+      "linkedin": {
+        "success": true,
+        "scheduledAt": "2025-07-21T16:18:27.413Z",
+        "platform": "linkedin"
+      }
+    },
+    "brandVoice": "# Chudi's Brand Voice & Content Guidelines\n\n## 🎯 Core Personality\n**Authentic Tech Entrepreneur wit..."
+  }
+]

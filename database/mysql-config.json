@@ -1,0 +1,14 @@
+{
+  "host": "localhost",
+  "port": 3306,
+  "user": "root",
+  "password": "",
+  "database": "ai_agents_db",
+  "charset": "utf8mb4",
+  "timezone": "+00:00",
+  "connectionLimit": 10,
+  "acquireTimeout": 60000,
+  "timeout": 60000,
+  "reconnect": true,
+  "multipleStatements": true
+} 

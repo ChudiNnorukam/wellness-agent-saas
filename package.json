@@ -1,39 +1,37 @@
 {
   "name": "wellness-agent-saas",
-  "version": "0.1.6",
-  "private": true,
-  "homepage": "https://wellness-agent-saas-ybpb.vercel.app",
+  "version": "1.0.0",
+  "description": "Autonomous AI agents for wellness SaaS optimization",
+  "main": "scripts/orchestrator.js",
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "type-check": "tsc --noEmit",
-    "test": "echo \"No tests specified\" && exit 0"
+    "start": "node scripts/orchestrator.js",
+    "test": "node scripts/test-improvements.js",
+    "sales": "node scripts/sales-optimizer.js",
+    "setup": "node scripts/setup-integrations.js",
+    "demo": "node scripts/demo-sales-optimizer.js",
+    "setup-db": "node scripts/setup-mysql-database.js",
+    "test-db": "node scripts/test-database-connection.js",
+    "setup-creds": "node scripts/credential-setup-helper.js",
+    "navigate": "node scripts/credential-setup-helper.js service",
+    "quick-nav": "node scripts/quick-navigate.js",
+    "nav": "node scripts/simple-navigate.js",
+    "autonomy": "node scripts/setup-autonomy-creds.js",
+    "wellness": "node scripts/wellness-ai-orchestrator.js"
   },
   "dependencies": {
-    "@stripe/stripe-js": "^7.5.0",
-    "@supabase/auth-helpers-nextjs": "^0.10.0",
-    "@supabase/ssr": "^0.6.1",
-    "@supabase/supabase-js": "^2.52.0",
-    "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
-    "lucide-react": "^0.525.0",
-    "next": "15.4.2",
-    "react": "19.1.0",
-    "react-dom": "19.1.0",
-    "stripe": "^18.3.0",
-    "tailwind-merge": "^3.3.1"
+    "stripe": "^14.0.0",
+    "googleapis": "^128.0.0",
+    "mysql2": "^3.6.0",
+    "dotenv": "^16.3.0",
+    "axios": "^1.6.0",
+    "node-cron": "^3.0.3",
+    "winston": "^3.11.0",
+    "open": "^9.1.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "15.4.2",
-    "tailwindcss": "^4",
-    "typescript": "^5"
-  }
+    "nodemon": "^3.0.0"
+  },
+  "keywords": ["ai", "agents", "saas", "optimization", "sales"],
+  "author": "Chudi Nnorukam",
+  "license": "MIT"
 }
