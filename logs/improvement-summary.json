@@ -1,6 +1,6 @@
 {
   "timeframe": "24h",
-  "totalChanges": 50,
+  "totalChanges": 75,
   "agents": [
     "UserHealthAnalysis",
     "WellnessRecommendations",
@@ -9,7 +9,7 @@
     "UserEngagement"
   ],
   "categories": {
-    "wellness": 50
+    "wellness": 75
   },
   "impact": 5,
   "topImprovements": [
