@@ -8,6 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "deploy": "node scripts/deploy-github-pages.js",
+    "deploy:pages": "npm run build && node scripts/deploy-github-pages.js",
     "agent-start": "node scripts/orchestrator.js",
     "test": "node scripts/test-improvements.js",
     "sales": "node scripts/sales-optimizer.js",
