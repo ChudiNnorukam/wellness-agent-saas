@@ -1,77 +1,144 @@
-# Stripe Setup Guide
+# Stripe Setup Guide for WellnessAI
 
-## Quick Setup Steps
+This guide will help you set up Stripe payments for your WellnessAI SaaS platform.
 
-### 1. Get Your Vercel Domain
-1. Go to [vercel.com/dashboard](https://vercel.com/dashboard)
-2. Click on your `wellness-agent-saas` project
-3. Copy your domain (e.g., `https://wellness-agent-saas-ybpb.vercel.app`)
+## Prerequisites
 
-### 2. Create Stripe Test Products
-1. Go to [dashboard.stripe.com](https://dashboard.stripe.com)
-2. **Toggle to "Test mode"** (top right)
-3. Go to **Products → Add product**
+- Stripe account (sign up at https://stripe.com)
+- Node.js and npm installed
+- WellnessAI project set up
 
-**Create Basic Plan:**
-- Name: `WellnessAI Basic`
-- Price: `$9.99/month`
-- Billing: `Recurring`
+## Step 1: Get Your Stripe API Keys
 
-**Create Premium Plan:**
-- Name: `WellnessAI Premium`
-- Price: `$19.99/month`
-- Billing: `Recurring`
+1. **Log into your Stripe Dashboard**
+   - Go to https://dashboard.stripe.com
+   - Sign in to your account
 
-### 3. Get Price IDs
-1. Click on each product you created
-2. Copy the **Price ID** (starts with `price_`)
-3. You'll need both Basic and Premium Price IDs
+2. **Navigate to API Keys**
+   - Click on "Developers" in the left sidebar
+   - Click on "API keys"
 
-### 4. Run the Setup Script
-```bash
-node scripts/setup-stripe.js
+3. **Copy Your Keys**
+   - **Publishable key** (starts with `pk_test_` or `pk_live_`)
+   - **Secret key** (starts with `sk_test_` or `sk_live_`)
+
+   **Example:**
+   - Publishable: `pk_test_your_publishable_key_here`
+   - Secret: `sk_test_your_secret_key_here`
+
+## Step 2: Set Up Webhooks
+
+1. **Go to Webhooks**
+   - In Stripe Dashboard, click "Developers" → "Webhooks"
+   - Click "Add endpoint"
+
+2. **Configure Endpoint**
+   - **Endpoint URL**: `https://your-domain.com/api/stripe/webhook`
+   - **Events to send**: Select these events:
+     - `customer.subscription.created`
+     - `customer.subscription.updated`
+     - `customer.subscription.deleted`
+     - `invoice.payment_succeeded`
+     - `invoice.payment_failed`
+
+3. **Copy Webhook Secret**
+   - After creating, click on the webhook
+   - Click "Reveal" next to "Signing secret"
+   - Copy the secret (starts with `whsec_`)
+
+## Step 3: Create Products and Prices
+
+1. **Create Products**
+   - Go to "Products" in Stripe Dashboard
+   - Click "Add product"
+   - Create two products:
+     - **Basic Plan** ($29/month)
+     - **Premium Plan** ($99/month)
+
+2. **Get Price IDs**
+   - For each product, note the Price ID
+   - Format: `price_xxxxxxxxxxxxx`
+
+## Step 4: Update Environment Variables
+
+Add these to your `.env` file:
+
+```env
+# Stripe Configuration
+STRIPE_SECRET_KEY=sk_test_your_secret_key_here
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_your_publishable_key_here
+STRIPE_WEBHOOK_SECRET=whsec_your_webhook_secret_here
+NEXT_PUBLIC_STRIPE_BASIC_PRICE_ID=price_your_basic_price_id_here
+NEXT_PUBLIC_STRIPE_PREMIUM_PRICE_ID=price_your_premium_price_id_here
 ```
 
-The script will:
-- Ask for your Vercel domain
-- Ask for your Price IDs
-- Create `.env.local` with all configuration
-- Show you the webhook URL to configure
-- Give you next steps
+## Step 5: Test Your Setup
 
-### 5. Configure Webhook
-1. Go to **Developers → Webhooks** in Stripe
-2. Click **"Add endpoint"**
-3. Enter the webhook URL shown by the script
-4. Select these events:
-   - `customer.subscription.created`
-   - `customer.subscription.updated`
-   - `customer.subscription.deleted`
-   - `invoice.payment_succeeded`
-   - `invoice.payment_failed`
+1. **Use Test Cards**
+   - Success: `4242 4242 4242 4242`
+   - Decline: `4000 0000 0000 0002`
+   - Requires Auth: `4000 0025 0000 3155`
 
-### 6. Update Vercel Environment Variables
-1. Go to your Vercel project → **Settings → Environment Variables**
-2. Add all variables from `.env.local`
+2. **Test the Flow**
+   - Go to your pricing page
+   - Click "Subscribe"
+   - Use a test card
+   - Verify webhook events in Stripe Dashboard
 
-### 7. Test the Integration
-Use these test card numbers:
-- **Success**: `4242 4242 4242 4242`
-- **Decline**: `4000 0000 0000 0002`
-- **Requires Auth**: `4000 0025 0000 3155`
+## Step 6: Go Live
 
-## Current Configuration
+When ready for production:
 
-✅ **Test Keys Ready:**
-- Publishable: `pk_test_51RmqxZ2ct93Utp7LHw6KDG9BRFFwr7IXeFqSSfcFLEoWV2pXv3tGfLWHSUTOpnkUXGdbHddjHy1tkMZHagMIFBDX00XB7aVWfl`
-- Secret: `[REDACTED - Use your own test secret key]`
-- Webhook Secret: `[REDACTED - Use your own webhook secret]`
+1. **Switch to Live Mode**
+   - In Stripe Dashboard, toggle to "Live mode"
+   - Get your live API keys
+   - Update environment variables
 
-🔄 **Still Needed:**
-- Vercel domain
-- Basic plan Price ID
-- Premium plan Price ID
+2. **Update Webhook URL**
+   - Change webhook URL to your production domain
+   - Update the webhook secret
 
-## Need Help?
+3. **Test with Real Cards**
+   - Use real cards for final testing
+   - Monitor webhook events
 
-If you get stuck, just run the setup script and it will guide you through each step! 
+## Troubleshooting
+
+### Common Issues
+
+1. **Webhook Failures**
+   - Check webhook URL is correct
+   - Verify webhook secret matches
+   - Check server logs for errors
+
+2. **Payment Failures**
+   - Verify API keys are correct
+   - Check card details
+   - Review Stripe Dashboard for errors
+
+3. **Subscription Issues**
+   - Verify price IDs are correct
+   - Check webhook events
+   - Review subscription status
+
+### Support
+
+- **Stripe Documentation**: https://stripe.com/docs
+- **Stripe Support**: https://support.stripe.com
+- **GitHub Issues**: Create an issue in this repository
+
+## Security Notes
+
+- **Never commit API keys to version control**
+- **Use environment variables for all secrets**
+- **Rotate keys regularly**
+- **Monitor for suspicious activity**
+
+## Next Steps
+
+After setting up Stripe:
+
+1. **Test the complete payment flow**
+2. **Set up analytics and monitoring**
+3. **Configure email notifications**
+4. **Set up customer support tools** 
