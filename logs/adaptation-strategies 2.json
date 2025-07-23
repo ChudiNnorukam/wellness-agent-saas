@@ -1,0 +1,15 @@
+[
+  {
+    "pattern": "build",
+    "strategy": {
+      "action": "pre_validation",
+      "steps": [
+        "Run npm install before build",
+        "Check for TypeScript errors",
+        "Validate configuration files",
+        "Test build locally before deployment"
+      ]
+    },
+    "timestamp": "2025-07-22T05:04:07.709Z"
+  }
+]
